@@ -1,0 +1,33 @@
+{
+  "name": "watt-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "build:watch": "tsc --p ./tsconfig-build.json && vite build --watch",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDdependencies": {
+    "lit": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "glob": "^10.3.12",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.0",
+    "vite-plugin-lib-inject-css": "^2.0.1",
+    "lit": "^3.1.2"
+  }
+}
