@@ -1,6 +1,6 @@
 import { LitElement, TemplateResult, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { defaultTheme } from "../../styles/themes";
+import { defaultTheme } from "../../styles/defaultTheme";
 
 
 @customElement('watt-header')

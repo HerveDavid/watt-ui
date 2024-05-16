@@ -1,15 +1,19 @@
-import { LitElement, TemplateResult, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { LitElement, TemplateResult, html } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import { buttonStyle } from "./style";
 
 @customElement('watt-button')
 export default class Button extends LitElement {
 
-    static styles = css``;
+    static styles = buttonStyle;
+
+    @property({type: Boolean})
+    disabled = false;
 
     protected render(): TemplateResult {
         return html`
-            <button>
-                <slot></slot>
+            <button ?disabled=${this.disabled}>
+               <slot></slot>
             </button>
         `
     }
