@@ -27,7 +27,7 @@ export default class Button extends LitElement {
         }
 
         button[disabled] {
-            background-color: ${defaultTheme.colorSurfaceLowered};
+            background-color: ${defaultTheme.colorBackground};
             color: ${defaultTheme.colorTextWeakest};
             padding: 15px 32px;
             text-align: center;
