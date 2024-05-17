@@ -12,7 +12,7 @@
     "**/*.css"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "tsc --p ./tsconfig-build.json && vite build --watch & vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
     "build:watch": "tsc --p ./tsconfig-build.json && vite build --watch",
     "preview": "vite preview",
