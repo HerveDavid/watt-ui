@@ -1,43 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Lit + TS</title>
-    <link rel="stylesheet" href="./src/index.css" />
-    <link rel="stylesheet" href="./src/theme.css" />
+    <title>Lit App Lit Element Simple Starter Kit</title>
   </head>
-  <body>
-
-    <watt-layout>
-      <watt-button>Délestage</watt-button>
-      <watt-button disabled>Ceci est button</watt-button>
-      <watt-button>Délestage</watt-button>
-      <watt-button>Ceci est button</watt-button>
-      <watt-button>Délestage</watt-button>
-      <watt-button disabled>Ceci est button</watt-button>
-      <watt-button>Délestage</watt-button>
-      <watt-button disabled>Ceci est button</watt-button>
-      <watt-button>Délestage</watt-button>
-      <watt-button disabled>Ceci est button</watt-button>
-  
-  
-      <watt-header label="davidou">
-        <div>
-          <p>Hello Crofto</p>
-        </div>
-      </watt-header>
-  
-    </watt-layout>
-
- 
-    <style>
-
-      
-    </style>
-
-    <script type="module" src="dist/main.js"></script>    
-
+  <body style="margin: 0; padding: 0">
+    <circuit-panel .isDarkMode="${true}"></circuit-panel>
+    <script type="module" src="/src/index.ts"></script>
+    <script>
+      const panel = document.querySelector("circuit-panel");
+      panel.isDarkMode = !panel.isDarkMode;
+    </script>
   </body>
 </html>
