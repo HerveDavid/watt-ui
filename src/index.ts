@@ -4,3 +4,4 @@ export {
   WattDropdown,
   WattDropdownItem,
 } from "./components/button-group";
+export { WattMessage } from "./components/message";
