@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lit App Lit Element Simple Starter Kit</title>
+    <link rel="stylesheet" href="/src/styles/theme-default.css" />
   </head>
   <body style="margin: 0; padding: 0">
-    <circuit-panel .isDarkMode="${true}"></circuit-panel>
+    <watt-button variant="default">Default</watt-button>
+    <watt-button variant="primary">Primary</watt-button>
+    <watt-button variant="danger">Danger</watt-button>
+    <watt-button variant="dashed">
+      <span>Filter</span>
+    </watt-button>
+    <watt-button variant="plain">Plain</watt-button>
+    <watt-button disabled>Disabled</watt-button>
+
     <script type="module" src="/src/index.ts"></script>
-    <script>
-      const panel = document.querySelector("circuit-panel");
-      panel.isDarkMode = !panel.isDarkMode;
-    </script>
   </body>
 </html>
