@@ -7,15 +7,19 @@
     <title>Lit App Lit Element Simple Starter Kit</title>
     <link rel="stylesheet" href="/src/styles/theme-default.css" />
   </head>
-  <body style="margin: 0; padding: 0">
-    <watt-button variant="default">Default</watt-button>
-    <watt-button variant="primary">Primary</watt-button>
-    <watt-button variant="danger">Danger</watt-button>
-    <watt-button variant="dashed">
-      <span>Filter</span>
-    </watt-button>
-    <watt-button variant="plain">Plain</watt-button>
-    <watt-button disabled>Disabled</watt-button>
+  <body style="margin: 0; padding: 10em">
+    <watt-button-group aria-labelledby="label">
+      <watt-button variant="danger">Send invoice</watt-button>
+      <watt-dropdown>
+        <watt-button slot="toggle" variant="primary" square>
+          Hello
+        </watt-button>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+      </watt-dropdown>
+    </watt-button-group>
 
     <script type="module" src="/src/index.ts"></script>
   </body>

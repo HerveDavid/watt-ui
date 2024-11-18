@@ -135,6 +135,9 @@ export class WattButton extends LitElement {
   @property({ type: Boolean, reflect: true })
   loading = false;
 
+  @property({ type: Boolean, reflect: true })
+  square = false;
+
   private handleClick(e: MouseEvent) {
     if (this.disabled || this.loading) {
       e.preventDefault();
