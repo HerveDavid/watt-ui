@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/src/styles/theme-default.css" />
   </head>
   <body style="margin: 0; padding: 10em">
+    <watt-button variant="default">gjhjkhg</watt-button>
+
     <watt-button-group aria-labelledby="label">
       <watt-button variant="danger">Send invoice</watt-button>
       <watt-dropdown>
@@ -38,6 +40,32 @@
       <a href="#" class="pet-name">Norfryd</a> cat.
       <span slot="footer">2 hours ago at Clinic</span>
     </watt-message>
+
+    <watt-avatar name="Laura Williams" size="xl"> </watt-avatar>
+
+    <!-- Input simple -->
+    <watt-input label="Username" placeholder="Enter your username"></watt-input>
+
+    <!-- Input avec icônes et validation -->
+    <watt-input
+      label="Email"
+      type="email"
+      required
+      error="Please enter a valid email"
+      expand
+      size="l"
+    >
+      <span slot="start">@</span>
+      <button slot="end">Verify</button>
+    </watt-input>
+
+    <!-- Input en lecture seule avec hint -->
+    <watt-input
+      label="API Key"
+      readonly
+      value="sk-1234..."
+      hint="Contact admin to change"
+    ></watt-input>
 
     <script type="module" src="/src/index.ts"></script>
   </body>
