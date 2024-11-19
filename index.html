@@ -41,6 +41,37 @@
       <span slot="footer">2 hours ago at Clinic</span>
     </watt-message>
 
+    <watt-message>
+      Un message avec une information temporelle
+      <span slot="footer">Il y a 2 heures</span>
+    </watt-message>
+
+    <watt-message href="/details/123">
+      Cliquez pour voir les détails complets
+      <span slot="footer">Il y a 15 minutes</span>
+    </watt-message>
+
+    <div class="controls">
+      <watt-button
+        onclick="document.querySelector('#interactive-message').focus()"
+      >
+        Focus
+      </watt-button>
+      <watt-button
+        onclick="document.querySelector('#interactive-message').click()"
+      >
+        Click
+      </watt-button>
+      <watt-button
+        onclick="document.querySelector('#interactive-message').blur()"
+      >
+        Blur
+      </watt-button>
+    </div>
+    <watt-message id="interactive-message" href="/test">
+      Message interactif contrôlable via JavaScript
+      <span slot="footer">Testez les boutons ci-dessus</span>
+    </watt-message>
     <watt-avatar name="Laura Williams" size="xl"> </watt-avatar>
 
     <!-- Input simple -->
@@ -49,7 +80,7 @@
     <!-- Input avec icônes et validation -->
     <watt-input
       label="Email"
-      type="email"
+      type="search"
       required
       error="Please enter a valid email"
       expand
@@ -67,6 +98,26 @@
       hint="Contact admin to change"
     ></watt-input>
 
+    <!-- Progress bar indéterminée -->
+
+    <watt-tab selected>Profile</watt-tab>
+    <watt-tab>Settings</watt-tab>
+
+    <!-- Basic usage -->
+
+
     <script type="module" src="/src/index.ts"></script>
+
+    <script type="module">
+      // Handle tab selection
+      document.addEventListener("watt-tab-select", (e) => {
+        // Deselect all tabs
+        document.querySelectorAll("watt-tab").forEach((tab) => {
+          tab.selected = false;
+        });
+        // Select clicked tab
+        e.detail.tab.selected = true;
+      });
+    </script>
   </body>
 </html>
