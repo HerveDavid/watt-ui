@@ -10,3 +10,4 @@ export { WattInput } from "./components/input";
 export { WattProgressBar } from "./components/progress";
 export { WattTab } from "./components/tab";
 export { WattIcon } from "./components/icon";
+export { WattFieldset } from "./components/fieldset";

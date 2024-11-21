@@ -29,7 +29,7 @@
       <span slot="footer">Just now at Clinic</span>
     </watt-message>
 
-    <watt-message>
+    <watt-message unread>
       <a href="#" class="person-name">Nina Hallikainen</a> arrived to clinic
       with <a href="#" class="pet-name">Durante</a> dog.
       <span slot="footer">20 minutes ago at Clinic</span>
@@ -105,6 +105,19 @@
 
     <!-- Basic usage -->
 
+    <watt-fieldset
+      label="My fieldset"
+      hint="Optional helper text"
+      required
+      size="m"
+    >
+      <div slot="hint">
+        jkdjhgkjh
+        <strong>additional information</strong> that might help the user
+      </div>
+    </watt-fieldset>
+
+    <watt-progress-bar label="Chargement en cours..."></watt-progress-bar>
 
     <script type="module" src="/src/index.ts"></script>
 
