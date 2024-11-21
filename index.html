@@ -5,13 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lit App Lit Element Simple Starter Kit</title>
+    <link rel="stylesheet" href="/src/styles/theme-default.css" />
   </head>
-  <body style="margin: 0; padding: 0">
-    <circuit-panel .isDarkMode="${true}"></circuit-panel>
+  <body style="margin: 0; padding: 10em">
+    <watt-button variant="default">gjhjkhg</watt-button>
+
+    <watt-button-group aria-labelledby="label">
+      <watt-button variant="danger">Send invoice</watt-button>
+      <watt-dropdown>
+        <watt-button slot="toggle" variant="primary" square>
+          Hello
+        </watt-button>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+      </watt-dropdown>
+    </watt-button-group>
+
+    <watt-message unread>
+      <a href="#" class="person-name">Ariel Salminen</a> arrived to clinic with
+      <a href="#" class="pet-name">Pixie</a> cat.
+      <span slot="footer">Just now at Clinic</span>
+    </watt-message>
+
+    <watt-message>
+      <a href="#" class="person-name">Nina Hallikainen</a> arrived to clinic
+      with <a href="#" class="pet-name">Durante</a> dog.
+      <span slot="footer">20 minutes ago at Clinic</span>
+    </watt-message>
+
+    <watt-message>
+      <a href="#" class="person-name">David Darnes</a> arrived to clinic with
+      <a href="#" class="pet-name">Norfryd</a> cat.
+      <span slot="footer">2 hours ago at Clinic</span>
+    </watt-message>
+
+    <watt-message>
+      Un message avec une information temporelle
+      <span slot="footer">Il y a 2 heures</span>
+    </watt-message>
+
+    <watt-message href="/details/123">
+      Cliquez pour voir les détails complets
+      <span slot="footer">Il y a 15 minutes</span>
+    </watt-message>
+
+    <div class="controls">
+      <watt-button
+        onclick="document.querySelector('#interactive-message').focus()"
+      >
+        Focus
+      </watt-button>
+      <watt-button
+        onclick="document.querySelector('#interactive-message').click()"
+      >
+        Click
+      </watt-button>
+      <watt-button
+        onclick="document.querySelector('#interactive-message').blur()"
+      >
+        Blur
+      </watt-button>
+    </div>
+    <watt-message id="interactive-message" href="/test">
+      Message interactif contrôlable via JavaScript
+      <span slot="footer">Testez les boutons ci-dessus</span>
+    </watt-message>
+    <watt-avatar name="Laura Williams" size="xl"> </watt-avatar>
+
+    <!-- Input simple -->
+    <watt-input label="Username" placeholder="Enter your username"></watt-input>
+
+    <!-- Input avec icônes et validation -->
+    <watt-input
+      label="Email"
+      type="search"
+      required
+      error="Please enter a valid email"
+      expand
+      size="l"
+    >
+      <span slot="start">@</span>
+      <button slot="end">Verify</button>
+    </watt-input>
+
+    <!-- Input en lecture seule avec hint -->
+    <watt-input
+      label="API Key"
+      readonly
+      value="sk-1234..."
+      hint="Contact admin to change"
+    ></watt-input>
+
+    <!-- Progress bar indéterminée -->
+
+    <watt-tab selected>Profile</watt-tab>
+    <watt-tab>Settings</watt-tab>
+
+    <!-- Basic usage -->
+
+
     <script type="module" src="/src/index.ts"></script>
-    <script>
-      const panel = document.querySelector("circuit-panel");
-      panel.isDarkMode = !panel.isDarkMode;
+
+    <script type="module">
+      // Handle tab selection
+      document.addEventListener("watt-tab-select", (e) => {
+        // Deselect all tabs
+        document.querySelectorAll("watt-tab").forEach((tab) => {
+          tab.selected = false;
+        });
+        // Select clicked tab
+        e.detail.tab.selected = true;
+      });
     </script>
   </body>
 </html>
