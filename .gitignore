@@ -11,7 +11,13 @@ node_modules/
 dist
 dist-ssr
 *.local
-.git/
+.DS_Store
+*.tsbuildinfo
+*.d.ts
+.turbo
+coverage
+.coverage
+
 
 # Editor directories and files
 .vscode/*
@@ -23,5 +29,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.env*
+!.env.example
 
 *storybook.log
