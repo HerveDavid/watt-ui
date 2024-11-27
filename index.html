@@ -119,6 +119,68 @@
 
     <watt-progress-bar label="Chargement en cours..."></watt-progress-bar>
 
+    <watt-button id="openButton" variant="primary">Open modal</watt-button>
+
+    <watt-modal id="modal" size="s" aria-labelledby="title">
+      <h2 slot="header" id="title">Modal title</h2>
+      <p>Modal body text goes here.</p>
+
+      <div slot="footer">
+        <watt-button id="cancelButton">Cancel</watt-button>
+        <watt-button id="confirmButton" variant="primary" autofocus
+          >Save changes</watt-button
+        >
+      </div>
+    </watt-modal>
+
+    <watt-badge>Neutral</watt-badge>
+    <watt-badge variant="danger">Danger</watt-badge>
+    <watt-badge variant="warning">Warning</watt-badge>
+    <watt-badge variant="success">Success</watt-badge>
+    <watt-badge variant="info">Info</watt-badge>
+    <watt-badge variant="highlight">Highlight</watt-badge>
+
+    <!-- Version "strong" -->
+    <watt-badge strong>Strong neutral</watt-badge>
+    <watt-badge variant="danger" strong>Strong danger</watt-badge>
+
+    <script>
+      // Get references to elements
+      const modal = document.querySelector("#modal");
+      const openButton = document.querySelector("#openButton");
+      const cancelButton = document.querySelector("#cancelButton");
+      const confirmButton = document.querySelector("#confirmButton");
+
+      // Open modal
+      openButton.addEventListener("watt-click", () => {
+        modal.open = true;
+      });
+
+      // Close on cancel
+      cancelButton.addEventListener("watt-click", () => {
+        modal.returnValue = "cancel";
+        modal.open = false;
+      });
+
+      // Close on confirm
+      confirmButton.addEventListener("watt-click", () => {
+        modal.returnValue = "confirm";
+        modal.open = false;
+      });
+
+      // Listen for close events
+      modal.addEventListener("close", (e) => {
+        console.log(`Modal closed with return value: ${modal.returnValue}`);
+      });
+
+      // Listen for cancel events
+      modal.addEventListener("cancel", (e) => {
+        // Prevent closing if needed
+        // e.preventDefault();
+        console.log("Modal cancel attempted");
+      });
+    </script>
+
     <script type="module" src="/src/index.ts"></script>
 
     <script type="module">
