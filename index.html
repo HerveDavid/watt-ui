@@ -144,6 +144,59 @@
     <watt-badge strong>Strong neutral</watt-badge>
     <watt-badge variant="danger" strong>Strong danger</watt-badge>
 
+    <watt-banner variant="info">
+      System maintenance scheduled for tonight at 22:00.
+      <a href="#">View schedule</a>.
+    </watt-banner>
+
+    <watt-banner variant="danger">
+      Connection to process controller lost.
+      <a href="#">View diagnostics</a>.
+    </watt-banner>
+
+    <watt-banner variant="warning">
+      Tank level approaching maximum capacity.
+      <a href="#">Check levels</a>.
+    </watt-banner>
+
+    <watt-banner variant="success">
+      Backup completed successfully.
+      <a href="#">View backup details</a>.
+      <watt-button>coucou</watt-button>
+    </watt-banner>
+
+    <watt-breadcrumb>
+      <watt-breadcrumb-item>
+        <a href="/#">Breadcrumb 1</a>
+      </watt-breadcrumb-item>
+      <watt-breadcrumb-item>
+        <a href="#">Breadcrumb 2</a>
+      </watt-breadcrumb-item>
+      <watt-breadcrumb-item>
+        <a href="#">Breadcrumb 3</a>
+      </watt-breadcrumb-item>
+      <watt-breadcrumb-item>
+        <a>Breadcrumb 4</a>
+      </watt-breadcrumb-item>
+    </watt-breadcrumb>
+
+    <watt-stack>
+      <div>Stack item <br />with multiple <br />rows of text</div>
+      <div>Stack item</div>
+      <div>Stack item</div>
+      <div>Stack item</div>
+    </watt-stack>
+
+    <watt-stack
+      direction="horizontal"
+      gap="l"
+      align-items="center"
+      justify-content="space-between"
+    >
+      <div>Item 1</div>
+      <div>Item 2</div>
+    </watt-stack>
+
     <script>
       // Get references to elements
       const modal = document.querySelector("#modal");

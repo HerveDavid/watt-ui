@@ -13,3 +13,6 @@ export { WattIcon } from "./components/icon";
 export { WattFieldset } from "./components/fieldset";
 export { WattModal } from "./components/modal";
 export { WattBadge } from "./components/badge";
+export { WattBanner } from "./components/banner";
+export { WattBreadcrumb, WattBreadcrumbItem } from "./components/breadcrumb";
+export { WattStack } from "./components/stack";
