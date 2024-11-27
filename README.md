@@ -1,14 +1,20 @@
-# Watt UI Components
-
+# Watt UI
 > Where Industrial Clarity Meets Operational Safety
 
-A collection of Web Components built with Lit.js following ISA 101 standards for industrial environments.
+A design system and collection of Web Components built with Lit.js following ISA 101 standards for industrial environments.
 
 ## Prerequisites
 
-- Node.js 18 or higher
-- pnpm 8 or higher (`npm install -g pnpm`)
+- Node.js 20.11.0 or higher
+- pnpm 9 or higher (`npm install -g pnpm`)
 - Modern browser supporting Web Components
+
+## Packages
+
+This monorepo contains the following packages:
+
+- `@watt-ui/core` - Core component library
+- `@watt-ui/docs` - Documentation and examples
 
 ## Features
 
@@ -19,28 +25,49 @@ A collection of Web Components built with Lit.js following ISA 101 standards for
 - 🌐 Framework agnostic
 - 📱 Touch-friendly with PPE support
 
-## Installation
+## Quick Start
+
+### Installation
 
 ```bash
-pnpm add @watt-ui/components
+pnpm add @watt-ui/core
 ```
 
-## Usage
-
-### Import styles
+### Usage
 
 ```js
-import '@watt-ui/components/theme.css';
+import '@watt-ui/core';
+
+// Use components
+const template = html`
+  <!-- Button Component -->
+  <watt-button variant="primary">Start Process</watt-button>
+  
+  <!-- Icon Component --> 
+  <watt-icon name="valve" active></watt-icon>
+`;
 ```
 
-### Use components
+## Development
 
-```html
-<!-- Button Component -->
-<watt-button variant="primary">Start Process</watt-button>
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/watt-ui.git
 
-<!-- Icon Component --> 
-<watt-icon name="valve" active></watt-icon>
+# Install dependencies
+pnpm install
+
+# Start development environment
+pnpm dev
+
+# Build all packages
+pnpm build
+
+# Run tests
+pnpm test
+
+# Format code
+pnpm format
 ```
 
 ## Components
@@ -121,20 +148,29 @@ Watt UI follows specific design principles for industrial environments:
 6. **Reduce Cognitive Load**: Consistent patterns and grouping
 7. **Ensure System Performance**: Quick feedback and loading
 
-## Development
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+Please make sure to update tests as appropriate and follow our contributing guidelines.
+
+## Versioning
+
+We use [Changesets](https://github.com/changesets/changesets) for version management. To make a change:
 
 ```bash
-# Install dependencies
-pnpm install
+# Create a changeset
+pnpm changeset
 
-# Start development server
-pnpm dev
+# Update versions and changelogs
+pnpm version-packages
 
-# Run tests
-pnpm test
-
-# Build for production
-pnpm build
+# Publish packages
+pnpm release
 ```
 
 ## Browser Support
@@ -143,10 +179,6 @@ pnpm build
 - Firefox
 - Safari
 - Edge
-
-## Contributing
-
-We welcome contributions! Please see our contributing guide for details.
 
 ## License
 
