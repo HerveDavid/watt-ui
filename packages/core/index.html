@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lit App Lit Element Simple Starter Kit</title>
+    <link rel="stylesheet" href="/src/styles/theme-default.css" />
+  </head>
+  <body style="margin: 0; padding: 10em">
+    <watt-button variant="default">gjhjkhg</watt-button>
+
+    <watt-button-group aria-labelledby="label">
+      <watt-button variant="danger">Send invoice</watt-button>
+      <watt-dropdown>
+        <watt-button slot="toggle" variant="primary" square>
+          Hello
+        </watt-button>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+        <watt-dropdown-item>gg</watt-dropdown-item>
+      </watt-dropdown>
+    </watt-button-group>
+
+    <watt-message unread>
+      <a href="#" class="person-name">Ariel Salminen</a> arrived to clinic with
+      <a href="#" class="pet-name">Pixie</a> cat.
+      <span slot="footer">Just now at Clinic</span>
+    </watt-message>
+
+    <watt-message unread>
+      <a href="#" class="person-name">Nina Hallikainen</a> arrived to clinic
+      with <a href="#" class="pet-name">Durante</a> dog.
+      <span slot="footer">20 minutes ago at Clinic</span>
+    </watt-message>
+
+    <watt-message>
+      <a href="#" class="person-name">David Darnes</a> arrived to clinic with
+      <a href="#" class="pet-name">Norfryd</a> cat.
+      <span slot="footer">2 hours ago at Clinic</span>
+    </watt-message>
+
+    <watt-message>
+      Un message avec une information temporelle
+      <span slot="footer">Il y a 2 heures</span>
+    </watt-message>
+
+    <watt-message href="/details/123">
+      Cliquez pour voir les détails complets
+      <span slot="footer">Il y a 15 minutes</span>
+    </watt-message>
+
+    <div class="controls">
+      <watt-button
+        onclick="document.querySelector('#interactive-message').focus()"
+      >
+        Focus
+      </watt-button>
+      <watt-button
+        onclick="document.querySelector('#interactive-message').click()"
+      >
+        Click
+      </watt-button>
+      <watt-button
+        onclick="document.querySelector('#interactive-message').blur()"
+      >
+        Blur
+      </watt-button>
+    </div>
+    <watt-message id="interactive-message" href="/test">
+      Message interactif contrôlable via JavaScript
+      <span slot="footer">Testez les boutons ci-dessus</span>
+    </watt-message>
+    <watt-avatar name="Laura Williams" size="xl"> </watt-avatar>
+
+    <!-- Input simple -->
+    <watt-input label="Username" placeholder="Enter your username"></watt-input>
+
+    <!-- Input avec icônes et validation -->
+    <watt-input
+      label="Email"
+      type="search"
+      required
+      error="Please enter a valid email"
+      expand
+      size="l"
+    >
+      <span slot="start">@</span>
+      <button slot="end">Verify</button>
+    </watt-input>
+
+    <!-- Input en lecture seule avec hint -->
+    <watt-input
+      label="API Key"
+      readonly
+      value="sk-1234..."
+      hint="Contact admin to change"
+    ></watt-input>
+
+    <!-- Progress bar indéterminée -->
+
+    <watt-tab selected>Profile</watt-tab>
+    <watt-tab>Settings</watt-tab>
+
+    <!-- Basic usage -->
+
+    <watt-fieldset
+      label="My fieldset"
+      hint="Optional helper text"
+      required
+      size="m"
+    >
+      <div slot="hint">
+        jkdjhgkjh
+        <strong>additional information</strong> that might help the user
+      </div>
+    </watt-fieldset>
+
+    <watt-progress-bar label="Chargement en cours..."></watt-progress-bar>
+
+    <watt-button id="openButton" variant="primary">Open modal</watt-button>
+
+    <watt-modal id="modal" size="s" aria-labelledby="title">
+      <h2 slot="header" id="title">Modal title</h2>
+      <p>Modal body text goes here.</p>
+
+      <div slot="footer">
+        <watt-button id="cancelButton">Cancel</watt-button>
+        <watt-button id="confirmButton" variant="primary" autofocus
+          >Save changes</watt-button
+        >
+      </div>
+    </watt-modal>
+
+    <watt-badge>Neutral</watt-badge>
+    <watt-badge variant="danger">Danger</watt-badge>
+    <watt-badge variant="warning">Warning</watt-badge>
+    <watt-badge variant="success">Success</watt-badge>
+    <watt-badge variant="info">Info</watt-badge>
+    <watt-badge variant="highlight">Highlight</watt-badge>
+
+    <!-- Version "strong" -->
+    <watt-badge strong>Strong neutral</watt-badge>
+    <watt-badge variant="danger" strong>Strong danger</watt-badge>
+
+    <watt-banner variant="info">
+      System maintenance scheduled for tonight at 22:00.
+      <a href="#">View schedule</a>.
+    </watt-banner>
+
+    <watt-banner variant="danger">
+      Connection to process controller lost.
+      <a href="#">View diagnostics</a>.
+    </watt-banner>
+
+    <watt-banner variant="warning">
+      Tank level approaching maximum capacity.
+      <a href="#">Check levels</a>.
+    </watt-banner>
+
+    <watt-banner variant="success">
+      Backup completed successfully.
+      <a href="#">View backup details</a>.
+      <watt-button>coucou</watt-button>
+    </watt-banner>
+
+    <watt-breadcrumb>
+      <watt-breadcrumb-item>
+        <a href="/#">Breadcrumb 1</a>
+      </watt-breadcrumb-item>
+      <watt-breadcrumb-item>
+        <a href="#">Breadcrumb 2</a>
+      </watt-breadcrumb-item>
+      <watt-breadcrumb-item>
+        <a href="#">Breadcrumb 3</a>
+      </watt-breadcrumb-item>
+      <watt-breadcrumb-item>
+        <a>Breadcrumb 4</a>
+      </watt-breadcrumb-item>
+    </watt-breadcrumb>
+
+    <watt-stack>
+      <div>Stack item <br />with multiple <br />rows of text</div>
+      <div>Stack item</div>
+      <div>Stack item</div>
+      <div>Stack item</div>
+    </watt-stack>
+
+    <watt-stack
+      direction="horizontal"
+      gap="l"
+      align-items="center"
+      justify-content="space-between"
+    >
+      <div>Item 1</div>
+      <div>Item 2</div>
+    </watt-stack>
+
+    <script>
+      // Get references to elements
+      const modal = document.querySelector("#modal");
+      const openButton = document.querySelector("#openButton");
+      const cancelButton = document.querySelector("#cancelButton");
+      const confirmButton = document.querySelector("#confirmButton");
+
+      // Open modal
+      openButton.addEventListener("watt-click", () => {
+        modal.open = true;
+      });
+
+      // Close on cancel
+      cancelButton.addEventListener("watt-click", () => {
+        modal.returnValue = "cancel";
+        modal.open = false;
+      });
+
+      // Close on confirm
+      confirmButton.addEventListener("watt-click", () => {
+        modal.returnValue = "confirm";
+        modal.open = false;
+      });
+
+      // Listen for close events
+      modal.addEventListener("close", (e) => {
+        console.log(`Modal closed with return value: ${modal.returnValue}`);
+      });
+
+      // Listen for cancel events
+      modal.addEventListener("cancel", (e) => {
+        // Prevent closing if needed
+        // e.preventDefault();
+        console.log("Modal cancel attempted");
+      });
+    </script>
+
+    <script type="module" src="/src/index.ts"></script>
+
+    <script type="module">
+      // Handle tab selection
+      document.addEventListener("watt-tab-select", (e) => {
+        // Deselect all tabs
+        document.querySelectorAll("watt-tab").forEach((tab) => {
+          tab.selected = false;
+        });
+        // Select clicked tab
+        e.detail.tab.selected = true;
+      });
+    </script>
+  </body>
+</html>
