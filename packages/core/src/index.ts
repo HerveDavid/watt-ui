@@ -1,3 +1,5 @@
+import "./styles/theme-default.css";
+
 // Form Components
 export { WattInput } from "./components/input";
 export { WattFieldset } from "./components/fieldset";
@@ -27,3 +29,4 @@ export { WattIcon } from "./components/icon";
 
 // Layout Components
 export { WattStack } from "./components/stack";
+
