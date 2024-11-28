@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body {
+    padding: 3em;
+}
+
 :root {
 	/* Couleurs principales selon ISA 101 */
 	--n-color-accent: rgb(71, 92, 167); /* Bleu ISA pour accent */
