@@ -3,7 +3,7 @@ import { customElement } from 'lit/decorators.js';
 
 @customElement('watt-breadcrumb')
 export class WattBreadcrumb extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: flex;
       align-items: center;
@@ -19,14 +19,14 @@ export class WattBreadcrumb extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     return html`<slot></slot>`;
   }
 }
 
 @customElement('watt-breadcrumb-item')
 export class WattBreadcrumbItem extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-flex;
       align-items: center;
@@ -50,7 +50,7 @@ export class WattBreadcrumbItem extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     return html`<a><slot></slot></a>`;
   }
 }

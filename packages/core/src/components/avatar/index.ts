@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-avatar")
 export class WattAvatar extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-block;
       position: relative;
@@ -86,7 +86,7 @@ export class WattAvatar extends LitElement {
       .substring(0, 2);
   }
 
-  render() {
+  override render() {
     return html`
       <div class="avatar" role="img" aria-label=${this.name}>
         ${this.src

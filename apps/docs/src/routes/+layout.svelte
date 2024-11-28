@@ -1,10 +1,10 @@
-<script lang="ts">
-	import { i18n } from '$lib/i18n';
-	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
+<script>
+	import '@watt-ui/core';
 	import '../app.css';
 	let { children } = $props();
 </script>
 
-<ParaglideJS {i18n}>
+<div>
+	<watt-button>jj</watt-button>
 	{@render children()}
-</ParaglideJS>
+</div>

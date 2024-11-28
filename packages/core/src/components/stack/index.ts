@@ -8,7 +8,7 @@ type Justify = 'center' | 'start' | 'end' | 'baseline' | 'space-between' | 'spac
 
 @customElement('watt-stack')
 export class WattStack extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: flex;
       box-sizing: border-box;
@@ -80,7 +80,7 @@ export class WattStack extends LitElement {
   @property({ type: String, reflect: true, attribute: 'justify-content' })
   justifyContent: Justify = undefined;
 
-  updated(changedProperties: Map<string, any>) {
+  override updated(changedProperties: Map<string, any>) {
     super.updated(changedProperties);
 
     // Update flex properties when attributes change
@@ -93,7 +93,7 @@ export class WattStack extends LitElement {
     }
   }
 
-  render() {
+  override render() {
     return html`
       <slot></slot>
     `;

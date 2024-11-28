@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-banner")
 export class WattBanner extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       font-family: var(--n-font-family);
@@ -56,7 +56,7 @@ export class WattBanner extends LitElement {
   @property({ type: String, reflect: true })
   variant: "info" | "danger" | "warning" | "success" = "info";
 
-  render() {
+  override render() {
     return html` <slot></slot> `;
   }
 }

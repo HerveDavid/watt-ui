@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-button")
 export class WattButton extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-block;
       font-family: var(--n-font-family);
@@ -152,7 +152,7 @@ export class WattButton extends LitElement {
     this.dispatchEvent(event);
   }
 
-  render() {
+  override render() {
     return html`
       <button
         ?disabled=${this.disabled}

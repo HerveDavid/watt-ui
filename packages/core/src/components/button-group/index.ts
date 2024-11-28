@@ -3,7 +3,7 @@ import { customElement, property, state } from "lit/decorators.js";
 
 @customElement("watt-button-group")
 export class WattButtonGroup extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-flex;
       gap: 1px;
@@ -18,14 +18,14 @@ export class WattButtonGroup extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     return html`<slot></slot>`;
   }
 }
 
 @customElement("watt-dropdown")
 export class WattDropdown extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-block;
       position: relative;
@@ -64,12 +64,12 @@ export class WattDropdown extends LitElement {
     this._handleClickOutside = this._handleClickOutside.bind(this);
   }
 
-  connectedCallback() {
+  override connectedCallback() {
     super.connectedCallback();
     document.addEventListener("click", this._handleClickOutside);
   }
 
-  disconnectedCallback() {
+  override disconnectedCallback() {
     super.disconnectedCallback();
     document.removeEventListener("click", this._handleClickOutside);
   }
@@ -84,7 +84,7 @@ export class WattDropdown extends LitElement {
     this._open = !this._open;
   }
 
-  render() {
+  override render() {
     return html`
       <div @click=${this._handleToggle}>
         <slot name="toggle"></slot>
@@ -98,7 +98,7 @@ export class WattDropdown extends LitElement {
 
 @customElement("watt-dropdown-item")
 export class WattDropdownItem extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
     }
@@ -120,7 +120,7 @@ export class WattDropdownItem extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     return html`
       <button role="menuitem">
         <slot></slot>

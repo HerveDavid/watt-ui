@@ -1,4 +1,4 @@
-import { LitElement, html, css, svg, TemplateResult, nothing } from 'lit';
+import { LitElement, html, css, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 type IconSize = 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
@@ -6,7 +6,7 @@ type IconResolver = (name: string) => string | Promise<string>;
 
 @customElement('watt-icon')
 export class WattIcon extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-block;
       width: var(--n-size-icon-m);
@@ -104,7 +104,7 @@ export class WattIcon extends LitElement {
     return undefined;
   }
 
-  render() {
+  override render() {
     const ariaHidden = this.label ? 'false' : 'true';
     const ariaLabel = this.label || undefined;
     const style = this.color ? `color: ${this.color}` : '';

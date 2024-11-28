@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-fieldset")
 export class WattFieldset extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       font-family: var(--n-font-family);
@@ -93,7 +93,7 @@ export class WattFieldset extends LitElement {
   @property({ type: String, reflect: true })
   size: "s" | "m" = "m";
 
-  render() {
+  override render() {
     return html`
       <fieldset aria-required=${this.required} aria-invalid=${!!this.error}>
         <legend>

@@ -1,5 +1,3 @@
-import "./styles/theme-default.css";
-
 // Form Components
 export { WattInput } from "./components/input";
 export { WattFieldset } from "./components/fieldset";

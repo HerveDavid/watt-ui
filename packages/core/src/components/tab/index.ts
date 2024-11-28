@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-tab")
 export class WattTab extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-flex;
       position: relative;
@@ -64,7 +64,7 @@ export class WattTab extends LitElement {
     }
   }
 
-  render() {
+  override render() {
     return html`
       <div @click=${this.handleClick}>
         <slot></slot>

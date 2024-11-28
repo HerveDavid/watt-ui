@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-progress-bar")
 export class WattProgressBar extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       width: 100%;
@@ -84,22 +84,22 @@ export class WattProgressBar extends LitElement {
   }
 
   // Methods required by the spec
-  focus(options?: FocusOptions): void {
+  override focus(options?: FocusOptions): void {
     const container = this.shadowRoot?.querySelector('.progress-container') as HTMLElement;
     container?.focus(options);
   }
 
-  blur(): void {
+  override blur(): void {
     const container = this.shadowRoot?.querySelector('.progress-container') as HTMLElement;
     container?.blur();
   }
 
-  click(): void {
+  override click(): void {
     const container = this.shadowRoot?.querySelector('.progress-container') as HTMLElement;
     container?.click();
   }
 
-  render() {
+  override render() {
     return html`
       <div
         class="progress-container"

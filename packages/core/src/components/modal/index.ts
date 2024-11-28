@@ -10,7 +10,7 @@ const SIZES = {
 
 @customElement('watt-modal')
 export class WattModal extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: none;
       font-family: var(--n-font-family);
@@ -136,7 +136,7 @@ export class WattModal extends LitElement {
   @query('.modal-backdrop') 
   private backdropElement!: HTMLElement;
 
-  firstUpdated() {
+  override firstUpdated() {
     this.style.setProperty('--modal-width', SIZES[this.size]);
   }
 
@@ -167,7 +167,7 @@ export class WattModal extends LitElement {
     }
   }
 
-  protected updated(changedProps: Map<string, unknown>) {
+  protected override updated(changedProps: Map<string, unknown>) {
     if (changedProps.has('open')) {
       if (this.open) {
         // Focus management when opening
@@ -192,7 +192,7 @@ export class WattModal extends LitElement {
     }
   }
 
-  render() {
+  override render() {
     return html`
       <div 
         class="modal-backdrop"

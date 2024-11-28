@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-message")
 export class WattMessage extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       font-family: var(--n-font-family);
@@ -98,17 +98,17 @@ export class WattMessage extends LitElement {
   @property({ type: Boolean, reflect: true })
   unread = false;
 
-  focus(options?: FocusOptions): void {
+  override focus(options?: FocusOptions): void {
     const target = this.href ? this.renderRoot.querySelector('a') : this;
     target?.focus(options);
   }
 
-  blur(): void {
+  override blur(): void {
     const target = this.href ? this.renderRoot.querySelector('a') : this;
     target?.blur();
   }
 
-  click(): void {
+  override click(): void {
     const target = this.href ? this.renderRoot.querySelector('a') : this;
     target?.click();
   }
@@ -125,7 +125,7 @@ export class WattMessage extends LitElement {
     `;
   }
 
-  render() {
+  override render() {
     // If href is provided, wrap content in an anchor tag
     if (this.href) {
       return html`

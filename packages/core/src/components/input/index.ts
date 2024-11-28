@@ -3,7 +3,7 @@ import { customElement, property, query } from "lit/decorators.js";
 
 @customElement("watt-input")
 export class WattInput extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       font-family: var(--n-font-family);
@@ -221,15 +221,15 @@ export class WattInput extends LitElement {
     return this.input;
   }
 
-  focus(options?: FocusOptions) {
+  override focus(options?: FocusOptions) {
     this.input?.focus(options);
   }
 
-  blur() {
+  override blur() {
     this.input?.blur();
   }
 
-  click() {
+  override click() {
     this.input?.click();
   }
 
@@ -265,7 +265,7 @@ export class WattInput extends LitElement {
     );
   }
 
-  render() {
+  override render() {
     return html`
       <div class="input-container">
         ${this.label

@@ -5,7 +5,7 @@ type BadgeVariant = 'warning' | 'success' | 'danger' | 'highlight' | 'neutral' |
 
 @customElement('watt-badge')
 export class WattBadge extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-flex;
       align-items: center;
@@ -94,7 +94,7 @@ export class WattBadge extends LitElement {
   @property({ type: Boolean, reflect: true })
   strong = false;
 
-  render() {
+  override render() {
     return html`<slot></slot>`;
   }
 }
