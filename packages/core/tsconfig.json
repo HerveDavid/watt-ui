@@ -29,6 +29,6 @@
     ],
     "types": ["mocha"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/index.ts"],
   "exclude": []
 }

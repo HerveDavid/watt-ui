@@ -5,6 +5,5 @@
 </script>
 
 <div>
-	<watt-button>jj</watt-button>
 	{@render children()}
 </div>
