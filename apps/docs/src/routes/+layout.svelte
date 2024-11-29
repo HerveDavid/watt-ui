@@ -187,7 +187,7 @@
 	.external-links {
 		margin-top: 2rem;
 		padding-top: 2rem;
-		border-top: 1px solid #e2e8f0;
+		border-top: 1px solid var(--w-color-border-strong);
 	}
 
 	.external-link {

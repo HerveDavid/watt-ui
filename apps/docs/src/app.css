@@ -164,3 +164,7 @@
 	--w-index-toast: 900;
 	--w-index-modal: 1000;
 }
+
+p {
+	color: var(--w-color-text);
+}
