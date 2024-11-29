@@ -13,7 +13,7 @@ export class WattModal extends LitElement {
   static override styles = css`
     :host {
       display: none;
-      font-family: var(--n-font-family);
+      font-family: var(--w-font-family);
     }
 
     :host([open]) {
@@ -26,30 +26,30 @@ export class WattModal extends LitElement {
       left: 0;
       right: 0;
       bottom: 0;
-      background: var(--n-color-overlay);
-      z-index: var(--n-index-modal);
+      background: var(--w-color-overlay);
+      z-index: var(--w-index-modal);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: var(--n-space-m);
+      padding: var(--w-space-m);
     }
 
     .modal {
-      background: var(--n-color-surface);
-      border-radius: var(--n-border-radius);
-      box-shadow: var(--n-box-shadow-modal);
+      background: var(--w-color-surface);
+      border-radius: var(--w-border-radius);
+      box-shadow: var(--w-box-shadow-modal);
       max-width: 100%;
       width: var(--modal-width);
       margin: auto;
       display: flex;
       flex-direction: column;
       position: relative;
-      max-height: calc(100vh - var(--n-space-xl));
+      max-height: calc(100vh - var(--w-space-xl));
     }
 
     .modal-header {
-      padding: var(--n-space-m);
-      border-bottom: 1px solid var(--n-color-border);
+      padding: var(--w-space-m);
+      border-bottom: 1px solid var(--w-color-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -58,22 +58,22 @@ export class WattModal extends LitElement {
     .modal-close {
       background: none;
       border: none;
-      padding: var(--n-space-xs);
+      padding: var(--w-space-xs);
       cursor: pointer;
-      color: var(--n-color-text);
+      color: var(--w-color-text);
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: var(--n-border-radius);
-      transition: background var(--n-transition-slowly);
+      border-radius: var(--w-border-radius);
+      transition: background var(--w-transition-slowly);
     }
 
     .modal-close:hover {
-      background: var(--n-color-surface-lowered);
+      background: var(--w-color-surface-lowered);
     }
 
     .modal-body {
-      padding: var(--n-space-m);
+      padding: var(--w-space-m);
       overflow: auto;
       flex: 1;
     }
@@ -87,24 +87,24 @@ export class WattModal extends LitElement {
     }
 
     .modal-footer {
-      padding: var(--n-space-m);
-      border-top: 1px solid var(--n-color-border);
+      padding: var(--w-space-m);
+      border-top: 1px solid var(--w-color-border);
       display: flex;
       justify-content: flex-end;
-      gap: var(--n-space-s);
+      gap: var(--w-space-s);
     }
 
     /* Initial animation states */
     .modal-backdrop {
       opacity: 0;
-      transition: opacity var(--n-transition-slowly);
+      transition: opacity var(--w-transition-slowly);
     }
 
     .modal {
       transform: translateY(20px);
       opacity: 0;
-      transition: transform var(--n-transition-slowly),
-                  opacity var(--n-transition-slowly);
+      transition: transform var(--w-transition-slowly),
+                  opacity var(--w-transition-slowly);
     }
 
     /* Animation end states */

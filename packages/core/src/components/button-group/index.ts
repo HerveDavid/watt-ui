@@ -35,13 +35,13 @@ export class WattDropdown extends LitElement {
       position: absolute;
       top: 100%;
       right: 0;
-      margin-top: var(--n-space-xs);
+      margin-top: var(--w-space-xs);
       min-width: 200px;
       background: white;
-      border-radius: var(--n-border-radius);
-      border: 1px solid var(--n-color-border);
-      box-shadow: var(--n-box-shadow-popout);
-      z-index: var(--n-index-popout);
+      border-radius: var(--w-border-radius);
+      border: 1px solid var(--w-color-border);
+      box-shadow: var(--w-box-shadow-popout);
+      z-index: var(--w-index-popout);
       display: none;
     }
 
@@ -105,18 +105,18 @@ export class WattDropdownItem extends LitElement {
 
     button {
       width: 100%;
-      padding: var(--n-space-s) var(--n-space-m);
+      padding: var(--w-space-s) var(--w-space-m);
       border: none;
       background: none;
       text-align: left;
       cursor: pointer;
       font-family: inherit;
-      color: var(--n-color-text);
-      transition: background-color var(--n-transition-quickly);
+      color: var(--w-color-text);
+      transition: background-color var(--w-transition-quickly);
     }
 
     button:hover {
-      background-color: var(--n-color-surface-lowered);
+      background-color: var(--w-color-surface-lowered);
     }
   `;
 

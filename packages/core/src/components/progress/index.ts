@@ -7,23 +7,23 @@ export class WattProgressBar extends LitElement {
     :host {
       display: block;
       width: 100%;
-      font-family: var(--n-font-family);
+      font-family: var(--w-font-family);
     }
 
     .progress-container {
       position: relative;
       height: 4px;
-      background: var(--n-color-surface-lowered);
-      border-radius: var(--n-border-radius-pill);
+      background: var(--w-color-surface-lowered);
+      border-radius: var(--w-border-radius-pill);
       overflow: hidden;
     }
 
     .progress-bar {
       position: absolute;
       height: 100%;
-      background: var(--n-color-accent);
-      border-radius: var(--n-border-radius-pill);
-      transition: width var(--n-transition-slowly);
+      background: var(--w-color-accent);
+      border-radius: var(--w-border-radius-pill);
+      transition: width var(--w-transition-slowly);
     }
 
     /* Indeterminate animation */

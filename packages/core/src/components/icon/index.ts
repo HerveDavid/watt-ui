@@ -9,40 +9,40 @@ export class WattIcon extends LitElement {
   static override styles = css`
     :host {
       display: inline-block;
-      width: var(--n-size-icon-m);
-      height: var(--n-size-icon-m);
-      color: var(--n-color-icon);
+      width: var(--w-size-icon-m);
+      height: var(--w-size-icon-m);
+      color: var(--w-color-icon);
       vertical-align: middle;
     }
 
     :host([size='xxs']) {
-      width: var(--n-size-icon-xxs);
-      height: var(--n-size-icon-xxs);
+      width: var(--w-size-icon-xxs);
+      height: var(--w-size-icon-xxs);
     }
 
     :host([size='xs']) {
-      width: var(--n-size-icon-xs);
-      height: var(--n-size-icon-xs);
+      width: var(--w-size-icon-xs);
+      height: var(--w-size-icon-xs);
     }
 
     :host([size='s']) {
-      width: var(--n-size-icon-s);
-      height: var(--n-size-icon-s);
+      width: var(--w-size-icon-s);
+      height: var(--w-size-icon-s);
     }
 
     :host([size='l']) {
-      width: var(--n-size-icon-l);
-      height: var(--n-size-icon-l);
+      width: var(--w-size-icon-l);
+      height: var(--w-size-icon-l);
     }
 
     :host([size='xl']) {
-      width: var(--n-size-icon-xl);
-      height: var(--n-size-icon-xl);
+      width: var(--w-size-icon-xl);
+      height: var(--w-size-icon-xl);
     }
 
     :host([size='xxl']) {
-      width: var(--n-size-icon-xxl);
-      height: var(--n-size-icon-xxl);
+      width: var(--w-size-icon-xxl);
+      height: var(--w-size-icon-xxl);
     }
 
     svg {
@@ -50,11 +50,11 @@ export class WattIcon extends LitElement {
       width: 100%;
       height: 100%;
       fill: currentColor;
-      transition: var(--n-transition-quickly);
+      transition: var(--w-transition-quickly);
     }
 
     :host(:hover) {
-      color: var(--n-color-icon-hover);
+      color: var(--w-color-icon-hover);
     }
   `;
 

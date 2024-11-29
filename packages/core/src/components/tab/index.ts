@@ -7,13 +7,13 @@ export class WattTab extends LitElement {
     :host {
       display: inline-flex;
       position: relative;
-      font-family: var(--n-font-family);
-      font-size: var(--n-font-size-m);
-      font-weight: var(--n-tab-font-weight, var(--n-font-weight));
-      color: var(--n-tab-color, var(--n-color-text-weak));
+      font-family: var(--w-font-family);
+      font-size: var(--w-font-size-m);
+      font-weight: var(--w-tab-font-weight, var(--w-font-weight));
+      color: var(--w-tab-color, var(--w-color-text-weak));
       cursor: pointer;
-      padding: var(--n-space-s) var(--n-space-m);
-      transition: color var(--n-transition-slowly);
+      padding: var(--w-space-s) var(--w-space-m);
+      transition: color var(--w-transition-slowly);
       user-select: none;
     }
 
@@ -21,21 +21,21 @@ export class WattTab extends LitElement {
       content: "";
       position: absolute;
       bottom: 0;
-      left: var(--n-space-m);
-      right: var(--n-space-m);
+      left: var(--w-space-m);
+      right: var(--w-space-m);
       height: 2px;
-      background: var(--n-color-accent);
+      background: var(--w-color-accent);
       transform: scaleX(0);
-      transition: transform var(--n-transition-slowly);
+      transition: transform var(--w-transition-slowly);
     }
 
     :host(:hover) {
-      color: var(--n-color-text);
+      color: var(--w-color-text);
     }
 
     :host([selected]) {
-      color: var(--n-color-text);
-      font-weight: var(--n-font-weight-active);
+      color: var(--w-color-text);
+      font-weight: var(--w-font-weight-active);
     }
 
     :host([selected])::after {
@@ -45,7 +45,7 @@ export class WattTab extends LitElement {
     /* Touch device support */
     @media (pointer: coarse) {
       :host {
-        padding: var(--n-space-m);
+        padding: var(--w-space-m);
       }
     }
   `;
