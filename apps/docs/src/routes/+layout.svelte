@@ -5,9 +5,6 @@
 	import '../app.css';
 	import '../theme.css';
 
-	// Static site generation
-	export const prerender = true;
-	
 	// Props
 	let title: string = 'Watt Ui';
 	let { children } = $props();
