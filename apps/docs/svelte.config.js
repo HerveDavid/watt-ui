@@ -12,12 +12,12 @@ const config = {
 		adapter: adapter({
 			pages: 'dist',
 			assets: 'dist',
-			fallback: 'index.html',
+			fallback: undefined,
 			precompress: false,
 			strict: true
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/watt-ui' : ''
+			base: process.argv.includes('dev') ? '' : '/watt-ui'
 		}
 	},
 
