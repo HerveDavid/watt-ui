@@ -8,7 +8,7 @@ type Justify = 'center' | 'start' | 'end' | 'baseline' | 'space-between' | 'spac
 
 @customElement('watt-stack')
 export class WattStack extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: flex;
       box-sizing: border-box;
@@ -28,40 +28,40 @@ export class WattStack extends LitElement {
 
     /* Gap mappings */
     :host([gap='none']) {
-      --n-stack-gap: 0;
+      --w-stack-gap: 0;
     }
 
     :host([gap='xs']) {
-      --n-stack-gap: var(--n-space-xs);
+      --w-stack-gap: var(--w-space-xs);
     }
 
     :host([gap='s']) {
-      --n-stack-gap: var(--n-space-s);
+      --w-stack-gap: var(--w-space-s);
     }
 
     :host([gap='m']) {
-      --n-stack-gap: var(--n-space-m);
+      --w-stack-gap: var(--w-space-m);
     }
 
     :host([gap='l']) {
-      --n-stack-gap: var(--n-space-l);
+      --w-stack-gap: var(--w-space-l);
     }
 
     :host([gap='xl']) {
-      --n-stack-gap: var(--n-space-xl);
+      --w-stack-gap: var(--w-space-xl);
     }
 
     :host([gap='xxl']) {
-      --n-stack-gap: var(--n-space-xxl);
+      --w-stack-gap: var(--w-space-xxl);
     }
 
     /* Apply gap based on direction */
     :host([direction='vertical']) {
-      row-gap: var(--n-stack-gap);
+      row-gap: var(--w-stack-gap);
     }
 
     :host([direction='horizontal']) {
-      column-gap: var(--n-stack-gap);
+      column-gap: var(--w-stack-gap);
     }
   `;
 
@@ -80,7 +80,7 @@ export class WattStack extends LitElement {
   @property({ type: String, reflect: true, attribute: 'justify-content' })
   justifyContent: Justify = undefined;
 
-  updated(changedProperties: Map<string, any>) {
+  override updated(changedProperties: Map<string, any>) {
     super.updated(changedProperties);
 
     // Update flex properties when attributes change
@@ -93,7 +93,7 @@ export class WattStack extends LitElement {
     }
   }
 
-  render() {
+  override render() {
     return html`
       <slot></slot>
     `;

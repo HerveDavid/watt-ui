@@ -3,27 +3,27 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-progress-bar")
 export class WattProgressBar extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
       width: 100%;
-      font-family: var(--n-font-family);
+      font-family: var(--w-font-family);
     }
 
     .progress-container {
       position: relative;
       height: 4px;
-      background: var(--n-color-surface-lowered);
-      border-radius: var(--n-border-radius-pill);
+      background: var(--w-color-surface-lowered);
+      border-radius: var(--w-border-radius-pill);
       overflow: hidden;
     }
 
     .progress-bar {
       position: absolute;
       height: 100%;
-      background: var(--n-color-accent);
-      border-radius: var(--n-border-radius-pill);
-      transition: width var(--n-transition-slowly);
+      background: var(--w-color-accent);
+      border-radius: var(--w-border-radius-pill);
+      transition: width var(--w-transition-slowly);
     }
 
     /* Indeterminate animation */
@@ -84,22 +84,22 @@ export class WattProgressBar extends LitElement {
   }
 
   // Methods required by the spec
-  focus(options?: FocusOptions): void {
+  override focus(options?: FocusOptions): void {
     const container = this.shadowRoot?.querySelector('.progress-container') as HTMLElement;
     container?.focus(options);
   }
 
-  blur(): void {
+  override blur(): void {
     const container = this.shadowRoot?.querySelector('.progress-container') as HTMLElement;
     container?.blur();
   }
 
-  click(): void {
+  override click(): void {
     const container = this.shadowRoot?.querySelector('.progress-container') as HTMLElement;
     container?.click();
   }
 
-  render() {
+  override render() {
     return html`
       <div
         class="progress-container"

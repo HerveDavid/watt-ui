@@ -3,21 +3,15 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/@watt-ui/core.umd.js",
-  "module": "./dist/@watt-ui/core.es.js",
-  "sideEffects": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/@watt-ui/core.es.js",
-      "require": "./dist/@watt-ui/core.umd.js"
-    }
-  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "tsc --watch",
+    "build": "tsc"
   },
   "dependencies": {
     "chart.js": "^4.4.6",
@@ -26,8 +20,10 @@
   },
   "devDependencies": {
     "@types/chart.js": "^2.9.41",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^22.7.7",
     "autoprefixer": "^10.4.20",
+    "mocha": "^10.8.2",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.9"

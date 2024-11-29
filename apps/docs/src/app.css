@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+[class^='mgc_']::before,
+[class*=' mgc_']::before {
+	color: inherit !important;
+}
+/* 
+html,
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+} */
+
+p {
+	color: var(--w-color-text);
+}

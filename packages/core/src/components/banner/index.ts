@@ -3,52 +3,52 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-banner")
 export class WattBanner extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
-      font-family: var(--n-font-family);
-      font-size: var(--n-font-size-m);
-      line-height: var(--n-line-height);
-      padding: var(--n-space-m);
-      margin-bottom: var(--n-space-m);
-      border-radius: var(--n-banner-border-radius, var(--n-border-radius));
-      box-shadow: var(--n-banner-box-shadow, var(--n-box-shadow-card));
+      font-family: var(--w-font-family);
+      font-size: var(--w-font-size-m);
+      line-height: var(--w-line-height);
+      padding: var(--w-space-m);
+      margin-bottom: var(--w-space-m);
+      border-radius: var(--w-banner-border-radius, var(--w-border-radius));
+      box-shadow: var(--w-banner-box-shadow, var(--w-box-shadow-card));
     }
 
     :host([variant="info"]) {
-      background-color: var(--n-color-surface);
-      border-left: 4px solid var(--n-color-status-info);
-      color: var(--n-color-text);
+      background-color: var(--w-color-surface);
+      border-left: 4px solid var(--w-color-status-info);
+      color: var(--w-color-text);
     }
 
     :host([variant="danger"]) {
-      background-color: var(--n-color-status-danger-weak);
-      border-left: 4px solid var(--n-color-status-danger);
-      color: var(--n-color-text-on-accent);
+      background-color: var(--w-color-status-danger-weak);
+      border-left: 4px solid var(--w-color-status-danger);
+      color: var(--w-color-text-on-accent);
     }
 
     :host([variant="warning"]) {
-      background-color: var(--n-color-surface);
-      border-left: 4px solid var(--n-color-status-warning);
-      color: var(--n-color-text);
+      background-color: var(--w-color-surface);
+      border-left: 4px solid var(--w-color-status-warning);
+      color: var(--w-color-text);
     }
 
     :host([variant="success"]) {
-      background-color: var(--n-color-surface);
-      border-left: 4px solid var(--n-color-status-success);
-      color: var(--n-color-text);
+      background-color: var(--w-color-surface);
+      border-left: 4px solid var(--w-color-status-success);
+      color: var(--w-color-text);
     }
 
     /* Styling for links inside the banner */
     ::slotted(a) {
-      color: var(--n-color-text-link);
+      color: var(--w-color-text-link);
       text-decoration: none;
-      font-weight: var(--n-font-weight-active);
-      transition: color var(--n-transition-quickly);
+      font-weight: var(--w-font-weight-active);
+      transition: color var(--w-transition-quickly);
     }
 
     ::slotted(a:hover) {
-      color: var(--n-color-accent-secondary);
+      color: var(--w-color-accent-secondary);
       text-decoration: underline;
     }
   `;
@@ -56,7 +56,7 @@ export class WattBanner extends LitElement {
   @property({ type: String, reflect: true })
   variant: "info" | "danger" | "warning" | "success" = "info";
 
-  render() {
+  override render() {
     return html` <slot></slot> `;
   }
 }

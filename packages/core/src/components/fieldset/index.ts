@@ -3,29 +3,29 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-fieldset")
 export class WattFieldset extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
-      font-family: var(--n-font-family);
+      font-family: var(--w-font-family);
     }
 
     fieldset {
       margin: 0;
-      padding: var(--n-space-m);
-      border: 1px solid var(--n-color-border);
-      border-radius: var(--n-border-radius);
+      padding: var(--w-space-m);
+      border: 1px solid var(--w-color-border);
+      border-radius: var(--w-border-radius);
     }
 
     legend {
-      padding: 0 var(--n-space-xs);
-      color: var(--n-color-text);
-      font-weight: var(--n-font-weight);
-      font-size: var(--n-font-size-m);
-      line-height: var(--n-line-height);
+      padding: 0 var(--w-space-xs);
+      color: var(--w-color-text);
+      font-weight: var(--w-font-weight);
+      font-size: var(--w-font-size-m);
+      line-height: var(--w-line-height);
     }
 
     :host([size="s"]) legend {
-      font-size: var(--n-font-size-s);
+      font-size: var(--w-font-size-s);
     }
 
     :host([hide-label]) legend {
@@ -40,8 +40,8 @@ export class WattFieldset extends LitElement {
     }
 
     .required {
-      color: var(--n-color-text-error);
-      margin-left: var(--n-space-xs);
+      color: var(--w-color-text-error);
+      margin-left: var(--w-space-xs);
     }
 
     :host([hide-required]) .required {
@@ -56,19 +56,19 @@ export class WattFieldset extends LitElement {
     }
 
     .hint {
-      margin-top: var(--n-space-xs);
-      color: var(--n-color-text-weak);
-      font-size: var(--n-font-size-s);
+      margin-top: var(--w-space-xs);
+      color: var(--w-color-text-weak);
+      font-size: var(--w-font-size-s);
     }
 
     .error {
-      margin-top: var(--n-space-xs);
-      color: var(--n-color-text-error);
-      font-size: var(--n-font-size-s);
+      margin-top: var(--w-space-xs);
+      color: var(--w-color-text-error);
+      font-size: var(--w-font-size-s);
     }
 
     :host([error]) fieldset {
-      border-color: var(--n-color-text-error);
+      border-color: var(--w-color-text-error);
     }
   `;
 
@@ -93,7 +93,7 @@ export class WattFieldset extends LitElement {
   @property({ type: String, reflect: true })
   size: "s" | "m" = "m";
 
-  render() {
+  override render() {
     return html`
       <fieldset aria-required=${this.required} aria-invalid=${!!this.error}>
         <legend>

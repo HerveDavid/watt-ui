@@ -3,10 +3,10 @@ import { customElement, property, query } from "lit/decorators.js";
 
 @customElement("watt-input")
 export class WattInput extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
-      font-family: var(--n-font-family);
+      font-family: var(--w-font-family);
     }
 
     :host([expand]) {
@@ -16,7 +16,7 @@ export class WattInput extends LitElement {
     .input-container {
       display: flex;
       flex-direction: column;
-      gap: var(--n-space-xs);
+      gap: var(--w-space-xs);
     }
 
     .input-wrapper {
@@ -27,80 +27,80 @@ export class WattInput extends LitElement {
     }
 
     label {
-      color: var(--n-color-text);
-      font-size: var(--n-font-size-s);
-      font-weight: var(--n-font-weight);
-      line-height: var(--n-line-height-caption);
+      color: var(--w-color-text);
+      font-size: var(--w-font-size-s);
+      font-weight: var(--w-font-weight);
+      line-height: var(--w-line-height-caption);
     }
 
     input {
       width: 100%;
-      padding: var(--n-space-xs) var(--n-space-m);
-      border: 1px solid var(--n-color-border);
-      border-radius: var(--n-border-radius);
+      padding: var(--w-space-xs) var(--w-space-m);
+      border: 1px solid var(--w-color-border);
+      border-radius: var(--w-border-radius);
       font-family: inherit;
-      font-size: var(--n-font-size-m);
-      line-height: var(--n-line-height-form);
-      color: var(--n-color-text);
+      font-size: var(--w-font-size-m);
+      line-height: var(--w-line-height-form);
+      color: var(--w-color-text);
       background: white;
-      transition: all var(--n-transition-slowly);
+      transition: all var(--w-transition-slowly);
     }
 
     /* Size variations */
     :host([size="s"]) input {
-      padding: calc(var(--n-space-xs) / 2) var(--n-space-s);
-      font-size: var(--n-font-size-s);
+      padding: calc(var(--w-space-xs) / 2) var(--w-space-s);
+      font-size: var(--w-font-size-s);
     }
 
     :host([size="l"]) input {
-      padding: var(--n-space-s) var(--n-space-m);
-      font-size: var(--n-font-size-l);
+      padding: var(--w-space-s) var(--w-space-m);
+      font-size: var(--w-font-size-l);
     }
 
     /* States */
     input:hover:not(:disabled) {
-      border-color: var(--n-color-border-hover);
+      border-color: var(--w-color-border-hover);
     }
 
     input:focus {
       outline: none;
-      border-color: var(--n-color-accent);
-      box-shadow: var(--n-box-shadow);
+      border-color: var(--w-color-accent);
+      box-shadow: var(--w-box-shadow);
     }
 
     :host([error]) input {
-      border-color: var(--n-color-status-danger);
+      border-color: var(--w-color-status-danger);
     }
 
     :host([readonly]) input {
-      background-color: var(--n-color-surface-lowered);
+      background-color: var(--w-color-surface-lowered);
       cursor: default;
     }
 
     :host([disabled]) input {
       cursor: not-allowed;
-      background: var(--n-color-surface-lowered);
-      border-color: var(--n-color-text-weakest);
-      color: var(--n-color-text-weakest);
+      background: var(--w-color-surface-lowered);
+      border-color: var(--w-color-text-weakest);
+      color: var(--w-color-text-weakest);
     }
 
     input::placeholder {
-      color: var(--n-color-text-weak);
+      color: var(--w-color-text-weak);
     }
 
     .required {
-      color: var(--n-color-status-danger);
-      margin-left: var(--n-space-xs);
+      color: var(--w-color-status-danger);
+      margin-left: var(--w-space-xs);
     }
 
     .helper-text {
-      font-size: var(--n-font-size-s);
-      line-height: var(--n-line-height-caption);
-      color: var(--n-color-text-weak);
+      font-size: var(--w-font-size-s);
+      line-height: var(--w-line-height-caption);
+      color: var(--w-color-text-weak);
     }
 
     :host([error]) .helper-text {
-      color: var(--n-color-status-danger);
+      color: var(--w-color-status-danger);
     }
 
     .visually-hidden {
@@ -116,11 +116,11 @@ export class WattInput extends LitElement {
     }
 
     ::slotted([slot="start"]) {
-      margin-right: var(--n-space-xs);
+      margin-right: var(--w-space-xs);
     }
 
     ::slotted([slot="end"]) {
-      margin-left: var(--n-space-xs);
+      margin-left: var(--w-space-xs);
     }
   `;
 
@@ -221,15 +221,15 @@ export class WattInput extends LitElement {
     return this.input;
   }
 
-  focus(options?: FocusOptions) {
+  override focus(options?: FocusOptions) {
     this.input?.focus(options);
   }
 
-  blur() {
+  override blur() {
     this.input?.blur();
   }
 
-  click() {
+  override click() {
     this.input?.click();
   }
 
@@ -265,7 +265,7 @@ export class WattInput extends LitElement {
     );
   }
 
-  render() {
+  override render() {
     return html`
       <div class="input-container">
         ${this.label

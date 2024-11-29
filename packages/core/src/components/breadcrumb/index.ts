@@ -3,54 +3,54 @@ import { customElement } from 'lit/decorators.js';
 
 @customElement('watt-breadcrumb')
 export class WattBreadcrumb extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: flex;
       align-items: center;
-      font-family: var(--n-font-family);
-      font-size: var(--n-font-size-m);
-      color: var(--n-color-text);
+      font-family: var(--w-font-family);
+      font-size: var(--w-font-size-m);
+      color: var(--w-color-text);
     }
 
     ::slotted(watt-breadcrumb-item:not(:last-child))::after {
       content: "/";
-      margin: 0 var(--n-space-xs);
-      color: var(--n-color-text-weak);
+      margin: 0 var(--w-space-xs);
+      color: var(--w-color-text-weak);
     }
   `;
 
-  render() {
+  override render() {
     return html`<slot></slot>`;
   }
 }
 
 @customElement('watt-breadcrumb-item')
 export class WattBreadcrumbItem extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-flex;
       align-items: center;
     }
 
     :host(:last-child) a {
-      color: var(--n-color-text);
+      color: var(--w-color-text);
       cursor: default;
       pointer-events: none;
     }
 
     a {
-      color: var(--n-color-text-link);
+      color: var(--w-color-text-link);
       text-decoration: none;
-      transition: color var(--n-transition-quickly);
+      transition: color var(--w-transition-quickly);
     }
 
     a:hover {
-      color: var(--n-color-accent);
+      color: var(--w-color-accent);
       text-decoration: underline;
     }
   `;
 
-  render() {
+  override render() {
     return html`<a><slot></slot></a>`;
   }
 }

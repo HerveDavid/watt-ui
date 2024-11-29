@@ -3,112 +3,112 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-button")
 export class WattButton extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-block;
-      font-family: var(--n-font-family);
+      font-family: var(--w-font-family);
     }
 
     button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: var(--n-space-s);
-      padding: var(--n-space-xs) var(--n-space-m);
-      border-radius: var(--n-border-radius);
+      gap: var(--w-space-s);
+      padding: var(--w-space-xs) var(--w-space-m);
+      border-radius: var(--w-border-radius);
       border: 1px solid;
-      font-size: var(--n-font-size-m);
-      line-height: var(--n-line-height-form);
+      font-size: var(--w-font-size-m);
+      line-height: var(--w-line-height-form);
       cursor: pointer;
-      transition: all var(--n-transition-slowly);
+      transition: all var(--w-transition-slowly);
       background: white;
     }
 
     /* Default */
     :host([variant="default"]) button {
-      border-color: var(--n-color-border);
+      border-color: var(--w-color-border);
       background: white;
-      color: var(--n-color-text);
+      color: var(--w-color-text);
     }
 
     :host([variant="default"]) button:hover {
-      border-color: var(--n-color-accent);
-      color: var(--n-color-accent);
+      border-color: var(--w-color-accent);
+      color: var(--w-color-accent);
     }
 
     /* Primary */
     :host([variant="primary"]) button {
-      background: var(--n-color-accent);
-      border-color: var(--n-color-accent);
-      color: var(--n-color-text-on-accent);
+      background: var(--w-color-accent);
+      border-color: var(--w-color-accent);
+      color: var(--w-color-text-on-accent);
     }
 
     :host([variant="primary"]) button:hover {
-      background: var(--n-color-accent-secondary);
-      border-color: var(--n-color-accent-secondary);
+      background: var(--w-color-accent-secondary);
+      border-color: var(--w-color-accent-secondary);
     }
 
     /* Danger */
     :host([variant="danger"]) button {
-      background: var(--n-color-status-danger);
-      border-color: var(--n-color-border-danger);
-      color: var(--n-color-text-on-accent);
+      background: var(--w-color-status-danger);
+      border-color: var(--w-color-border-danger);
+      color: var(--w-color-text-on-accent);
     }
 
     :host([variant="danger"]) button:hover {
-      background: var(--n-color-status-danger-weak);
-      border-color: var(--n-color-status-danger-weak);
+      background: var(--w-color-status-danger-weak);
+      border-color: var(--w-color-status-danger-weak);
     }
 
     /* Plain */
     :host([variant="plain"]) button {
       background: transparent;
       border-color: transparent;
-      color: var(--n-color-text);
-      padding: var(--n-space-xs) 0;
+      color: var(--w-color-text);
+      padding: var(--w-space-xs) 0;
     }
 
     :host([variant="plain"]) button:hover {
-      color: var(--n-color-accent);
+      color: var(--w-color-accent);
     }
 
     /* Disabled */
     :host([disabled]) button,
     button:disabled {
       cursor: not-allowed;
-      border-color: var(--n-color-text-weakest);
-      color: var(--n-color-text-weakest);
-      background: var(--n-color-surface-lowered);
+      border-color: var(--w-color-text-weakest);
+      color: var(--w-color-text-weakest);
+      background: var(--w-color-surface-lowered);
     }
 
     /* Filter/Dashed */
     :host([variant="dashed"]) button {
       border-style: dashed;
       background: white;
-      color: var(--n-color-text);
+      color: var(--w-color-text);
     }
 
     :host([variant="dashed"]) button:hover {
-      border-color: var(--n-color-accent);
-      color: var(--n-color-accent);
+      border-color: var(--w-color-accent);
+      color: var(--w-color-accent);
     }
 
     /* Focus state */
     button:focus {
       outline: none;
-      box-shadow: var(--n-box-shadow);
+      box-shadow: var(--w-box-shadow);
     }
 
     /* Loading spinner */
     .loading-spinner {
-      width: var(--n-size-icon-s);
-      height: var(--n-size-icon-s);
+      width: var(--w-size-icon-s);
+      height: var(--w-size-icon-s);
       border: 2px solid currentColor;
       border-bottom-color: transparent;
-      border-radius: var(--n-border-radius-circle);
+      border-radius: var(--w-border-radius-circle);
       display: inline-block;
-      animation: spin var(--n-transition-slowly) linear infinite;
-      margin-right: var(--n-space-s);
+      animation: spin var(--w-transition-slowly) linear infinite;
+      margin-right: var(--w-space-s);
     }
 
     @keyframes spin {
@@ -120,8 +120,8 @@ export class WattButton extends LitElement {
     /* Touch device support */
     @media (pointer: coarse) {
       button {
-        min-height: calc(var(--n-size-icon-l) * 2);
-        min-width: calc(var(--n-size-icon-l) * 2);
+        min-height: calc(var(--w-size-icon-l) * 2);
+        min-width: calc(var(--w-size-icon-l) * 2);
       }
     }
   `;
@@ -152,7 +152,7 @@ export class WattButton extends LitElement {
     this.dispatchEvent(event);
   }
 
-  render() {
+  override render() {
     return html`
       <button
         ?disabled=${this.disabled}

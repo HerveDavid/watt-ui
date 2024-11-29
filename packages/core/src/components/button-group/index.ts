@@ -3,7 +3,7 @@ import { customElement, property, state } from "lit/decorators.js";
 
 @customElement("watt-button-group")
 export class WattButtonGroup extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-flex;
       gap: 1px;
@@ -18,14 +18,14 @@ export class WattButtonGroup extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     return html`<slot></slot>`;
   }
 }
 
 @customElement("watt-dropdown")
 export class WattDropdown extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-block;
       position: relative;
@@ -35,13 +35,13 @@ export class WattDropdown extends LitElement {
       position: absolute;
       top: 100%;
       right: 0;
-      margin-top: var(--n-space-xs);
+      margin-top: var(--w-space-xs);
       min-width: 200px;
       background: white;
-      border-radius: var(--n-border-radius);
-      border: 1px solid var(--n-color-border);
-      box-shadow: var(--n-box-shadow-popout);
-      z-index: var(--n-index-popout);
+      border-radius: var(--w-border-radius);
+      border: 1px solid var(--w-color-border);
+      box-shadow: var(--w-box-shadow-popout);
+      z-index: var(--w-index-popout);
       display: none;
     }
 
@@ -64,12 +64,12 @@ export class WattDropdown extends LitElement {
     this._handleClickOutside = this._handleClickOutside.bind(this);
   }
 
-  connectedCallback() {
+  override connectedCallback() {
     super.connectedCallback();
     document.addEventListener("click", this._handleClickOutside);
   }
 
-  disconnectedCallback() {
+  override disconnectedCallback() {
     super.disconnectedCallback();
     document.removeEventListener("click", this._handleClickOutside);
   }
@@ -84,7 +84,7 @@ export class WattDropdown extends LitElement {
     this._open = !this._open;
   }
 
-  render() {
+  override render() {
     return html`
       <div @click=${this._handleToggle}>
         <slot name="toggle"></slot>
@@ -98,29 +98,29 @@ export class WattDropdown extends LitElement {
 
 @customElement("watt-dropdown-item")
 export class WattDropdownItem extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: block;
     }
 
     button {
       width: 100%;
-      padding: var(--n-space-s) var(--n-space-m);
+      padding: var(--w-space-s) var(--w-space-m);
       border: none;
       background: none;
       text-align: left;
       cursor: pointer;
       font-family: inherit;
-      color: var(--n-color-text);
-      transition: background-color var(--n-transition-quickly);
+      color: var(--w-color-text);
+      transition: background-color var(--w-transition-quickly);
     }
 
     button:hover {
-      background-color: var(--n-color-surface-lowered);
+      background-color: var(--w-color-surface-lowered);
     }
   `;
 
-  render() {
+  override render() {
     return html`
       <button role="menuitem">
         <slot></slot>

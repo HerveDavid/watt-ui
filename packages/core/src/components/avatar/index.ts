@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("watt-avatar")
 export class WattAvatar extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host {
       display: inline-block;
       position: relative;
@@ -13,11 +13,11 @@ export class WattAvatar extends LitElement {
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: var(--n-border-radius-circle);
-      background-color: var(--n-color-surface-lowered);
-      color: var(--n-color-text);
-      font-family: var(--n-font-family);
-      font-weight: var(--n-font-weight);
+      border-radius: var(--w-border-radius-circle);
+      background-color: var(--w-color-surface-lowered);
+      color: var(--w-color-text);
+      font-family: var(--w-font-family);
+      font-weight: var(--w-font-weight);
       overflow: hidden;
     }
 
@@ -29,39 +29,39 @@ export class WattAvatar extends LitElement {
 
     /* Size variants */
     :host([size="xs"]) .avatar {
-      width: var(--n-size-icon-xs);
-      height: var(--n-size-icon-xs);
-      font-size: calc(var(--n-size-icon-xs) * 0.4);
+      width: var(--w-size-icon-xs);
+      height: var(--w-size-icon-xs);
+      font-size: calc(var(--w-size-icon-xs) * 0.4);
     }
 
     :host([size="s"]) .avatar {
-      width: var(--n-size-icon-s);
-      height: var(--n-size-icon-s);
-      font-size: calc(var(--n-size-icon-s) * 0.4);
+      width: var(--w-size-icon-s);
+      height: var(--w-size-icon-s);
+      font-size: calc(var(--w-size-icon-s) * 0.4);
     }
 
     :host([size="m"]) .avatar {
-      width: var(--n-size-icon-m);
-      height: var(--n-size-icon-m);
-      font-size: calc(var(--n-size-icon-m) * 0.4);
+      width: var(--w-size-icon-m);
+      height: var(--w-size-icon-m);
+      font-size: calc(var(--w-size-icon-m) * 0.4);
     }
 
     :host([size="l"]) .avatar {
-      width: var(--n-size-icon-l);
-      height: var(--n-size-icon-l);
-      font-size: calc(var(--n-size-icon-l) * 0.4);
+      width: var(--w-size-icon-l);
+      height: var(--w-size-icon-l);
+      font-size: calc(var(--w-size-icon-l) * 0.4);
     }
 
     :host([size="xl"]) .avatar {
-      width: var(--n-size-icon-xl);
-      height: var(--n-size-icon-xl);
-      font-size: calc(var(--n-size-icon-xl) * 0.4);
+      width: var(--w-size-icon-xl);
+      height: var(--w-size-icon-xl);
+      font-size: calc(var(--w-size-icon-xl) * 0.4);
     }
 
     :host([size="xxl"]) .avatar {
-      width: var(--n-size-icon-xxl);
-      height: var(--n-size-icon-xxl);
-      font-size: calc(var(--n-size-icon-xxl) * 0.4);
+      width: var(--w-size-icon-xxl);
+      height: var(--w-size-icon-xxl);
+      font-size: calc(var(--w-size-icon-xxl) * 0.4);
     }
   `;
 
@@ -86,7 +86,7 @@ export class WattAvatar extends LitElement {
       .substring(0, 2);
   }
 
-  render() {
+  override render() {
     return html`
       <div class="avatar" role="img" aria-label=${this.name}>
         ${this.src
