@@ -1,7 +1,7 @@
 :root {
   /* Couleurs principales selon ISA 101 */
   --w-color-accent: rgb(71, 92, 167); /* Bleu ISA pour accent */
-  --w-color-accent-secondary: rgb(71, 92, 167);
+  --w-color-accent-secondary: rgb(44, 40, 231);
   
   /* Textes */
   --w-color-text: rgb(63, 63, 63);
