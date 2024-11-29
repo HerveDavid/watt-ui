@@ -34,12 +34,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-nodes
+        uses: actions/setup-node
         with:
           node-version: '22'
 
       - name: Setup Pnpm
-        use: pnpm/actions-setup@v2
+        use: pnpm/action-setup@v2
         with:
           version: 9
 
