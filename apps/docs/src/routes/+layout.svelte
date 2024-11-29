@@ -1,7 +1,9 @@
 <!-- Layout.svelte -->
 <script lang="ts">
 	import '@watt-ui/core';
+	import 'mingcute_icon/font/Mingcute.css';
 	import '../app.css';
+	import '../theme.css';
 
 	// Props
 	let title: string = 'Watt Ui';
@@ -22,16 +24,16 @@
 	const sections = [
 		{
 			title: 'Get started',
-			icon: 'home',
+			icon: 'mgc_search_line',
 			items: [
 				{ href: '/installation', label: 'Installation' },
 				{ href: '/overview', label: 'Overview' },
-				{ href: '/export', label: 'Export' }
+				{ href: '/guidelines', label: 'Guidelines' }
 			]
 		},
 		{
 			title: 'Components',
-			icon: 'grid',
+			icon: 'mgc_layout_10_line',
 			items: [
 				{ href: '/components/working', label: 'Working with Components' },
 				{ href: '/components/props', label: 'Component Props' },
@@ -41,7 +43,7 @@
 		},
 		{
 			title: 'Style',
-			icon: 'brush',
+			icon: 'mgc_paint_brush_line',
 			items: [
 				{ href: '/style/typography', label: 'Typography' },
 				{ href: '/style/spacing', label: 'Spacing' },
@@ -70,7 +72,7 @@
 			{#each sections as section}
 				<div class="nav-section">
 					<h3>
-						<span class="icon">{section.icon}</span>
+						<span class="{section.icon} mr-2"></span>
 						{section.title}
 					</h3>
 					<ul>
@@ -85,12 +87,12 @@
 
 			<div class="external-links">
 				<a href="https://github.com" class="external-link">
-					<span class="icon">github</span>
+					<span class="mgc_github_line mr-2"></span>
 					Github
 				</a>
-				<a href="https://twitter.com" class="external-link">
-					<span class="icon">twitter</span>
-					Twitter
+				<a href="https://storybook.js.org" class="external-link">
+					<span class="mgc_book_6_line mr-2"></span>
+					Storybook
 				</a>
 			</div>
 		</aside>
@@ -107,7 +109,7 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		background-color: var(--w-color-background);
+		background-color: var(--w-color-surface-raised);
 	}
 
 	.top-bar {
@@ -201,7 +203,6 @@
 
 	.content {
 		flex: 1;
-		padding: 2rem;
 		background: var(--w-color-background);
 	}
 </style>

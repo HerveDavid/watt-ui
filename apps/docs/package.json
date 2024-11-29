@@ -37,6 +37,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
-		"@watt-ui/core": "workspace:*"
+		"@watt-ui/core": "workspace:*",
+		"mingcute_icon": "^2.9.5"
 	}
 }
