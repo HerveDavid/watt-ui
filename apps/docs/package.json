@@ -39,6 +39,8 @@
 	},
 	"dependencies": {
 		"@watt-ui/core": "workspace:*",
+		"dompurify": "^3.2.2",
+		"marked": "^15.0.3",
 		"mingcute_icon": "^2.9.5"
 	}
 }

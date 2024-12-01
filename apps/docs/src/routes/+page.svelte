@@ -14,7 +14,7 @@
 		</div>
 	</section>
 
-	<section class="principles">
+	<section class="principles h-2/6">
 		<div class="context">
 			<h2 class="text-2xl font-black">Design Principles</h2>
 			<div class="principles-grid">
@@ -54,6 +54,43 @@
 			</div>
 		</div>
 	</section>
+
+	<footer class="footer">
+		<div class="footer-content context px-8">
+			<div class="footer-column">
+				<h3>Contribute</h3>
+				<p>WattUi is hosted on GitHub. Submit feedback or feature requests through our issue form.</p>
+				<a href="https://github.com/HerveDavid/watt-ui" class="button secondary">Contribute on GitHub</a>
+			</div>
+
+			<div class="footer-column">
+				<h3>Get in touch</h3>
+				<nav class="footer-links">
+					<a href="#" class="footer-link">
+						<span>Watt Ui Slack channel</span>
+					</a>
+					<a href="#" class="footer-link">
+						<span>Contact support</span>
+					</a>
+					<a href="#" class="footer-link">
+						<span>Submit an issue</span>
+					</a>
+				</nav>
+			</div>
+		</div>
+
+
+		<div class="footer-bottom context">
+			<p>© 2024 Watt Ui</p>
+			<nav class="footer-meta">
+				<a href="#">Accessibility</a>
+				<a href="#">Terms of Use</a>
+				<a href="#">What's New</a>
+				<a href="#">API status</a>
+				<a href="#">RSS Feed</a>
+			</nav>
+		</div>
+	</footer>
 </div>
 
 <style>
@@ -141,5 +178,85 @@
 
 	.button.secondary:hover {
 		background: rgb(245, 245, 245);
+	}
+
+	.footer {
+		background: var(--w-color-surface);
+		padding: 80px 0;
+		padding: 2em;
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		margin-bottom: 48px;
+	}
+
+	.footer h3 {
+		font-size: 24px;
+		font-weight: 700;
+		color: var(--w-color-text);
+		margin-bottom: 16px;
+	}
+
+	.footer p {
+		color: var(--w-color-text);
+		margin-bottom: 24px;
+		line-height: 1.5;
+	}
+
+	.footer-links {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.footer-link {
+		color: var(--w-color-accent);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.footer-link:hover {
+		color: rgb(61, 82, 157);
+	}
+
+	.footer-bottom {
+		border-top: 1px solid var(--w-color-border, #eee);
+		padding: 24px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 16px;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	.footer-meta {
+		display: flex;
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+
+	.footer-meta a {
+		color: var(--w-color-text);
+		text-decoration: none;
+		font-size: 14px;
+	}
+
+	.footer-meta a:hover {
+		color: var(--w-color-accent);
+	}
+
+	@media (max-width: 768px) {
+		.footer-bottom {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.footer-meta {
+			justify-content: center;
+		}
 	}
 </style>

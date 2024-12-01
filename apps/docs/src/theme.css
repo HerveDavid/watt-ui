@@ -11,8 +11,8 @@
 	--w-color-text-weakest: rgb(192, 192, 192);
 	--w-color-text-on-accent: rgb(255, 255, 255);
 	--w-color-text-error: rgb(226, 32, 40);
-	--w-color-text-danger: rgb(236, 134, 41);
-	--w-color-text-success: rgb(147, 194, 228);
+	--w-color-text-danger: rgb(255, 255, 255);
+	--w-color-text-success: rgb(63, 63, 63);
 	--w-color-text-neutral: rgb(128, 128, 128);
 	--w-color-text-neutral-strong: rgb(63, 63, 63);
 	--w-color-text-warning: rgb(245, 225, 27);

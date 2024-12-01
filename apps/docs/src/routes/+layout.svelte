@@ -5,9 +5,6 @@
 	import '../app.css';
 	import '../theme.css';
 
-	// Static site generation
-	export const prerender = true;
-	
 	// Props
 	let title: string = 'Watt Ui';
 	let { children } = $props();
@@ -72,31 +69,33 @@
 	<div class="context">
 		<!-- Sidebar -->
 		<aside class="sidebar">
-			{#each sections as section}
-				<div class="nav-section">
-					<h3>
-						<span class="{section.icon} mr-2"></span>
-						{section.title}
-					</h3>
-					<ul>
-						{#each section.items as item}
-							<li>
-								<a href={item.href}>{item.label}</a>
-							</li>
-						{/each}
-					</ul>
-				</div>
-			{/each}
+			<div class="sidebar-content">
+				{#each sections as section}
+					<div class="nav-section">
+						<h3>
+							<span class="{section.icon} mr-2"></span>
+							{section.title}
+						</h3>
+						<ul>
+							{#each section.items as item}
+								<li>
+									<a href={item.href}>{item.label}</a>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				{/each}
 
-			<div class="external-links">
-				<a href="https://github.com" class="external-link">
-					<span class="mgc_github_line mr-2"></span>
-					Github
-				</a>
-				<a href="https://storybook.js.org" class="external-link">
-					<span class="mgc_book_6_line mr-2"></span>
-					Storybook
-				</a>
+				<div class="external-links">
+					<a href="https://github.com" class="external-link">
+						<span class="mgc_github_line mr-2"></span>
+						Github
+					</a>
+					<a href="https://storybook.js.org" class="external-link">
+						<span class="mgc_book_6_line mr-2"></span>
+						Storybook
+					</a>
+				</div>
 			</div>
 		</aside>
 
@@ -109,8 +108,6 @@
 
 <style>
 	.layout {
-		display: flex;
-		flex-direction: column;
 		min-height: 100vh;
 		background-color: var(--w-color-surface-raised);
 	}
@@ -122,6 +119,12 @@
 		padding: 1rem 2rem;
 		border-bottom: 1px solid var(--w-color-border-strong);
 		background-color: var(--w-color-overlay);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4rem;
+		z-index: 50;
 	}
 
 	.logo a {
@@ -143,14 +146,24 @@
 
 	.context {
 		display: flex;
-		flex: 1;
+		padding-top: 4rem; /* Hauteur du top-bar */
+		height: 100vh;
 	}
 
 	.sidebar {
 		width: 16rem;
-		padding: 2rem;
-		border-right: 1px solid var(--w-color-border);
 		background: var(--w-color-surface-lowered);
+		position: fixed;
+		top: 4rem; /* Hauteur du top-bar */
+		bottom: 0;
+		left: 0;
+		border-right: 1px solid var(--w-color-border);
+	}
+
+	.sidebar-content {
+		padding: 2rem;
+		height: 100%;
+		overflow-y: auto;
 	}
 
 	.nav-section {
@@ -206,6 +219,9 @@
 
 	.content {
 		flex: 1;
+		margin-left: 16rem; /* Largeur de la sidebar */
 		background: var(--w-color-background);
+		min-height: calc(100vh - 4rem);
+		overflow-y: auto;
 	}
 </style>
