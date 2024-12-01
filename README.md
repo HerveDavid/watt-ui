@@ -52,7 +52,7 @@ const template = html`
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/watt-ui.git
+git clone https://github.com/HerveDavid/watt-ui.git
 
 # Install dependencies
 pnpm install
