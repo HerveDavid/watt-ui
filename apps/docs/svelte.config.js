@@ -17,7 +17,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : '/watt-ui'
+			base: process.env.NODE_ENV === 'production' ? '/watt-ui' : '',
 		}
 	},
 
