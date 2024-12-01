@@ -81,7 +81,7 @@
 		max-width: 1024px;
 		margin: 0 auto;
 		padding: 24px;
-		background-color: aqua;
+		/* background-color: aqua; */
 		height: 100%;
 		overflow-y: auto;
 	}

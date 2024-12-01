@@ -7,12 +7,12 @@
 	color: inherit !important;
 }
 
-html,
+/* html,
 body {
 	margin: 0;
 	height: 100%;
 	overflow: hidden;
-}
+} */
 
 body {
 	color: var(--w-color-text);
