@@ -22,6 +22,9 @@
     },
     "typecheck": {
       "outputs": ["tsconfig.tsbuildinfo"]
+    },
+    "preview": {
+      "dependsOn": ["^build"]
     }
   },
   "globalDependencies": [

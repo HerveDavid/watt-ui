@@ -58,7 +58,7 @@
 	<!-- Top Bar -->
 	<header class="top-bar">
 		<div class="logo">
-			<a href="/">{title}</a>
+			<a href="{base}/">{title}</a>
 		</div>
 		<nav class="primary-nav">
 			{#each primaryNav as item}
@@ -88,7 +88,7 @@
 				{/each}
 
 				<div class="external-links">
-					<a href="https://github.com" class="external-link">
+					<a href="https://github.com/HerveDavid/watt-ui" class="external-link">
 						<span class="mgc_github_line mr-2"></span>
 						Github
 					</a>
