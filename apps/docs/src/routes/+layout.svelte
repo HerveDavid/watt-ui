@@ -1,6 +1,7 @@
 <!-- Layout.svelte -->
 <script lang="ts">
 	import '@watt-ui/core';
+	import { base } from '$app/paths';
 	import 'mingcute_icon/font/Mingcute.css';
 	import '../app.css';
 	import '../theme.css';
@@ -79,7 +80,7 @@
 						<ul>
 							{#each section.items as item}
 								<li>
-									<a href={item.href}>{item.label}</a>
+									<a href="{base}{item.href}">{item.label}</a>
 								</li>
 							{/each}
 						</ul>
