@@ -3,6 +3,6 @@ export interface ComponentMeta {
 	title: string;
 	description: string;
 	status: 'Ready' | 'In progress' | 'New' | 'Deprecated';
-	preview_type: 'html' | 'component',
-	preview: string;
+	preview?: string;
+	preview_component?: string;
 }
