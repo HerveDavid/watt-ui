@@ -1,27 +1,20 @@
 <script lang="ts">
-	import * as PreviewComponents from '../previews';
+	import { base } from '$app/paths';
+	import type { ComponentMeta } from '@/types/component-meta';
 
-	type ComponentStatus = 'Ready' | 'In Progress' | 'Deprecated';
+	export let component: ComponentMeta;
+	const { slug, title, description, status, preview_type, preview } = component;
 
-	interface ComponentProps {
-		title: string;
-		description: string;
-		status: ComponentStatus;
-		previewComponent: keyof typeof import('../previews');
-	}
-
-	export let title: ComponentProps['title'];
-	export let description: ComponentProps['description'];
-	export let status: ComponentProps['status'];
-	export let previewComponent: ComponentProps['previewComponent'];
-
-	const Preview = PreviewComponents[previewComponent];
+	$: previewComponent =
+		preview_type === 'component' ? async () => (await import(preview)).default : null;
 </script>
 
-<div class="card">
+<a href="{base}/components/{slug}" class="card">
 	<div class="preview">
-		{#if Preview}
-			<svelte:component this={Preview} />
+		{#if preview_type === 'html'}
+			{@html preview}
+		{:else if preview_type === 'component'}
+			<svelte:component this={previewComponent} />
 		{/if}
 	</div>
 	<div class="content">
@@ -31,7 +24,7 @@
 		</div>
 		<p class="description">{description}</p>
 	</div>
-</div>
+</a>
 
 <style>
 	.card {
@@ -41,6 +34,10 @@
 		overflow: hidden;
 	}
 
+	.card:hover {
+		border: 1px solid var(--w-color-border-highlight);
+	}
+
 	.preview {
 		height: 200px;
 		background-color: var(--w-color-surface-lowered);
@@ -48,6 +45,10 @@
 		align-items: center;
 		justify-content: center;
 		border-bottom: 1px solid var(--w-color-border);
+	}
+
+	.card:hover .preview {
+		border-bottom: 1px solid var(--w-color-border-highlight);
 	}
 
 	.content {
