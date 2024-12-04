@@ -1,17 +1,9 @@
 <script lang="ts">
-	import type { ComponentMeta } from '@/types/component-meta';
-	import type { MarkdownModule } from '@/types/markdown-module';
+	import { getComponentPosts } from '@/lib/markdown';
 	import ComponentCard from './component-card.svelte';
 
-	// Loads markdown components
-	const modules = import.meta.glob<MarkdownModule>('@/components/*.md', { eager: true });
-	const components: ComponentMeta[] = Object.entries(modules).map(([path, module]) => {
-		const slug = path.split('/').pop()?.replace('.md', '') || '';
-		return {
-			slug,
-			...module.metadata
-		};
-	});
+	// Get components
+	let components = getComponentPosts();
 
 	// Filter components
 	let filterText = '';

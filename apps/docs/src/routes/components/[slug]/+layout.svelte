@@ -1,31 +1,23 @@
 <script lang="ts">
 	// Import components from lib/components as needed
-	import Header from './header.svelte';
-	import Nav from './nav.svelte';
 	import type { ComponentMeta } from '@/types/component-meta';
 
 	// Markdown frontmatter props
 	export let data: ComponentMeta;
+	const { title, description, preview } = data;
 </script>
 
 <div class="layout">
-	<Header />
-
-	<div class="container">
-		<Nav />
-
+	<div>
 		<main class="content">
 			<div class="content-header">
-				<h1>{data.title}</h1>
-				<p class="description">{data.description}</p>
-				<div class="status-badge" class:ready={data.status === 'Ready'}>
-					{data.status}
-				</div>
+				<h1>{title}</h1>
+				<p class="description">{description}</p>
 			</div>
 
 			<div class="preview">
-				{#if data.preview_type === 'html'}
-					{@html data.preview}
+				{#if preview}
+					{@html preview}
 				{/if}
 			</div>
 
