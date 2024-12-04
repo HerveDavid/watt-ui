@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 @customElement('watt-gauge')
 export class WattGauge extends LitElement {
-    static override styles = css`
+  static override styles = css`
     :host {
       display: block;
       width: var(--gauge-width, 40px);
@@ -31,7 +31,7 @@ export class WattGauge extends LitElement {
       position: absolute;
       bottom: 0;
       width: 100%;
-      background-color: var(--w-color-accent);
+      background-color: var(--w-color-status-info-weak);
       transition: height var(--w-transition-slowly);
     }
 
@@ -70,35 +70,35 @@ export class WattGauge extends LitElement {
     }
   `;
 
-    @property({ type: Number })
-    value = 0;
+  @property({ type: Number })
+  value = 0;
 
-    @property({ type: Number })
-    min = 0;
+  @property({ type: Number })
+  min = 0;
 
-    @property({ type: Number })
-    max = 100;
+  @property({ type: Number })
+  max = 100;
 
-    @property({ type: Number })
-    markerValue = 50;
+  @property({ type: Number })
+  markerValue = 50;
 
-    @property({ type: String })
-    unit = '';
+  @property({ type: String })
+  unit = '';
 
-    private getPercentage(value: number): number {
-        return ((value - this.min) / (this.max - this.min)) * 100;
-    }
+  private getPercentage(value: number): number {
+    return ((value - this.min) / (this.max - this.min)) * 100;
+  }
 
-    private getMarkerPosition(): number {
-        return 100 - this.getPercentage(this.markerValue);
-    }
+  private getMarkerPosition(): number {
+    return 100 - this.getPercentage(this.markerValue);
+  }
 
-    private getValuePosition(): number {
-        return 100 - this.getPercentage(this.value);
-    }
+  private getValuePosition(): number {
+    return 100 - this.getPercentage(this.value);
+  }
 
-    override render() {
-        return html`
+  override render() {
+    return html`
       <div class="gauge">
         <div class="gauge-container">
           <div 
@@ -119,11 +119,11 @@ export class WattGauge extends LitElement {
         <div class="gauge-value">${this.value}${this.unit}</div>
       </div>
     `;
-    }
+  }
 }
 
 declare global {
-    interface HTMLElementTagNameMap {
-        'watt-gauge': WattGauge;
-    }
+  interface HTMLElementTagNameMap {
+    'watt-gauge': WattGauge;
+  }
 }
