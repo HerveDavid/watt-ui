@@ -1,98 +1,13 @@
-<script>
-	import ComponentCard from '../../components/ComponentCard.svelte';
+<script lang="ts">
+	import { getComponentPosts } from '@/lib/markdown';
+	import ComponentCard from './component-card.svelte';
 
-	// Component definitions
-	const components = [
-		{
-			title: 'Avatar',
-			description:
-				'Avatar displays a compact visual identifier for users or entities, defaulting to a placeholder when no image is provided.',
-			status: 'Ready',
-			previewComponent: 'Avatar'
-		},
-		{
-			title: 'Badge',
-			description:
-				'Badges are status indicators that highlight the state of items, typically used in tables to show current status.',
-			status: 'Ready',
-			previewComponent: 'Badge'
-		},
-		{
-			title: 'Banner',
-			description:
-				'Banner displays prominent messages to highlight important interface updates or conditions.',
-			status: 'Ready',
-			previewComponent: 'Banner'
-		},
-		{
-			title: 'Button',
-			description:
-				'Buttons trigger interface actions. Use primary style once per section for main action, with secondary styles for additional options.',
-			status: 'Ready',
-			previewComponent: 'Button'
-		},
-		{
-			title: 'Breacrumb',
-			description:
-				"Breadcrumbs show the user's location within a site hierarchy and allow easy navigation to parent page.",
-			status: 'Ready',
-			previewComponent: 'Breacrumb'
-		},
-		{
-			title: 'Fieldset',
-			description:
-				'The Fieldset component groups related form fields together, creating a visual and logical structure to enhance data organization and user experience.',
-			status: 'Ready',
-			previewComponent: 'Fieldset'
-		},
-		{
-			title: 'Icon',
-			description:
-				"Icons supplement interfaces with visual meaning, especially where text isn't practical.",
-			status: 'Ready',
-			previewComponent: 'Icon'
-		},
-		{
-			title: 'Input',
-			description:
-				'The Input component provides a text field for users to enter and edit data, supporting various types of content with customizable styling and validation options.',
-			status: 'Ready',
-			previewComponent: 'Input'
-		},
-		{
-			title: 'Message',
-			description:
-				'The Message component displays feedback or status information to users, supporting different styles to indicate success, error, warning, or informational states.',
-			status: 'Ready',
-			previewComponent: 'Message'
-		},
-		{
-			title: 'Modal',
-			description:
-				'The Modal component creates overlay windows that focus user attention on specific content or actions, offering a controlled and accessible way to display important information without leaving the current page.',
-			status: 'Ready',
-			previewComponent: 'Modal'
-		},
-		{
-			title: 'Progress',
-			description:
-				"The Progress component displays a visual indicator of a process's completion status, helping users track the advancement of tasks or operations.",
-			status: 'Ready',
-			previewComponent: 'Progress'
-		},
-		{
-			title: 'Tab',
-			description:
-				'The Tab component organizes content into multiple panels, allowing users to switch between different views while keeping the interface clean and navigable.',
-			status: 'Ready',
-			previewComponent: 'Tab'
-		}
-		// Additional components...
-	];
+	// Get components
+	let components = getComponentPosts();
 
+	// Filter components
 	let filterText = '';
 	let selectedCategory = 'All categories';
-
 	$: filteredComponents = components.filter((component) =>
 		component.title.toLowerCase().includes(filterText.toLowerCase())
 	);
@@ -142,7 +57,7 @@
 
 	<div class="components-grid">
 		{#each filteredComponents as component}
-			<ComponentCard {...component} />
+			<ComponentCard {component} />
 		{/each}
 	</div>
 </div>

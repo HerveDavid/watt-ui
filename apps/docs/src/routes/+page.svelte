@@ -1,3 +1,6 @@
+<script>
+</script>
+
 <div class="overflow-auto">
 	<section class="hero h-4/6">
 		<div class="hero-content context">
@@ -59,8 +62,12 @@
 		<div class="footer-content context px-8">
 			<div class="footer-column">
 				<h3>Contribute</h3>
-				<p>WattUi is hosted on GitHub. Submit feedback or feature requests through our issue form.</p>
-				<a href="https://github.com/HerveDavid/watt-ui" class="button secondary">Contribute on GitHub</a>
+				<p>
+					WattUi is hosted on GitHub. Submit feedback or feature requests through our issue form.
+				</p>
+				<a href="https://github.com/HerveDavid/watt-ui" class="button secondary"
+					>Contribute on GitHub</a
+				>
 			</div>
 
 			<div class="footer-column">
@@ -78,7 +85,6 @@
 				</nav>
 			</div>
 		</div>
-
 
 		<div class="footer-bottom context">
 			<p>© 2024 Watt Ui</p>

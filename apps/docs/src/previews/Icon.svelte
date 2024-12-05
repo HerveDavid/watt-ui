@@ -1,1 +1,0 @@
-<watt-ion variant="square">icon</watt-ion>

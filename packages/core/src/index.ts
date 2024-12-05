@@ -25,5 +25,8 @@ export { WattBanner } from "./components/banner";
 export { WattAvatar } from "./components/avatar";
 export { WattIcon } from "./components/icon";
 
+// Indicator Components
+export { WattGauge } from "./components/gauge";
+
 // Layout Components
 export { WattStack } from "./components/stack";

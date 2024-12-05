@@ -28,7 +28,7 @@
 			icon: 'mgc_search_line',
 			items: [
 				{ href: '/installation', label: 'Installation' },
-				{ href: '/overview', label: 'Overview' },
+				{ href: '/components', label: 'Components' },
 				{ href: '/guidelines', label: 'Guidelines' }
 			]
 		},
