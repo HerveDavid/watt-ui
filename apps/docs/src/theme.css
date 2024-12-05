@@ -51,7 +51,7 @@
 	--w-color-status-highlight: rgb(145, 106, 173);
 	--w-color-status-danger: rgb(226, 32, 40);
 	--w-color-status-success: rgb(147, 194, 228);
-	--w-color-status-info: rgb(226, 231, 250);
+	--w-color-status-info: rgb(71, 92, 167);
 	--w-color-status-progress: rgb(147, 194, 228);
 	--w-color-status-notification: rgb(226, 32, 40);
 
@@ -61,7 +61,7 @@
 	--w-color-status-highlight-weak: rgb(145, 106, 173);
 	--w-color-status-danger-weak: rgb(226, 32, 40);
 	--w-color-status-success-weak: rgb(147, 194, 228);
-	--w-color-status-info-weak: rgb(200, 207, 233);
+	--w-color-status-info-weak: rgb(71, 92, 167);
 	--w-color-status-progress-weak: rgb(147, 194, 228);
 
 	/* Éléments d'interface */

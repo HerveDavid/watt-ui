@@ -1,156 +1,162 @@
 :root {
-  /* Couleurs principales selon ISA 101 */
-  --w-color-accent: rgb(71, 92, 167); /* Bleu ISA pour accent */
-  --w-color-accent-secondary: rgb(44, 40, 231);
-  
-  /* Textes */
-  --w-color-text: rgb(63, 63, 63);
-  --w-color-text-link: rgb(71, 92, 167);
-  --w-color-text-weak: rgb(145, 145, 145);
-  --w-color-text-weaker: rgb(128, 128, 128);
-  --w-color-text-weakest: rgb(192, 192, 192);
-  --w-color-text-on-accent: rgb(255, 255, 255);
-  --w-color-text-error: rgb(226, 32, 40);
-  --w-color-text-danger: rgb(236, 134, 41);
-  --w-color-text-success: rgb(147, 194, 228);
-  --w-color-text-neutral: rgb(128, 128, 128);
-  --w-color-text-neutral-strong: rgb(63, 63, 63);
-  --w-color-text-warning: rgb(245, 225, 27);
-  --w-color-text-warning-strong: rgb(63, 63, 63);
-  --w-color-text-highlight: rgb(145, 106, 173);
-  --w-color-text-info: rgb(71, 92, 167);
-  --w-color-text-progress: rgb(147, 194, 228);
+	/* Couleurs principales selon ISA 101 */
+	--w-color-accent: rgb(71, 92, 167); /* Bleu ISA pour accent */
+	--w-color-accent-secondary: rgb(44, 40, 231);
 
-  /* Navigation */
-  --w-color-nav-surface: rgb(224, 224, 224);
-  --w-color-nav-heading: rgb(63, 63, 63);
-  --w-color-nav-hover: rgb(216, 216, 216);
+	/* Textes */
+	--w-color-text: rgb(63, 63, 63);
+	--w-color-text-link: rgb(74, 85, 104);
+	--w-color-text-weak: rgb(145, 145, 145);
+	--w-color-text-weaker: rgb(128, 128, 128);
+	--w-color-text-weakest: rgb(192, 192, 192);
+	--w-color-text-on-accent: rgb(255, 255, 255);
+	--w-color-text-error: rgb(226, 32, 40);
+	--w-color-text-danger: rgb(255, 255, 255);
+	--w-color-text-success: rgb(63, 63, 63);
+	--w-color-text-neutral: rgb(128, 128, 128);
+	--w-color-text-neutral-strong: rgb(63, 63, 63);
+	--w-color-text-warning: rgb(245, 225, 27);
+	--w-color-text-warning-strong: rgb(63, 63, 63);
+	--w-color-text-highlight: rgb(145, 106, 173);
+	--w-color-text-info: rgb(71, 92, 167);
+	--w-color-text-progress: rgb(147, 194, 228);
 
-  /* Bordures */
-  --w-color-border: rgb(160, 160, 164);
-  --w-color-border-strong: rgb(128, 128, 128);
-  --w-color-border-neutral: rgb(192, 192, 192);
-  --w-color-border-warning: rgb(245, 225, 27);
-  --w-color-border-highlight: rgb(145, 106, 173);
-  --w-color-border-danger: rgb(226, 32, 40);
-  --w-color-border-success: rgb(147, 194, 228);
-  --w-color-border-info: rgb(71, 92, 167);
-  --w-color-border-progress: rgb(147, 194, 228);
-  --w-color-border-hover: rgb(63, 63, 63);
+	/* Navigation */
+	--w-color-nav-surface: rgb(224, 224, 224);
+	--w-color-nav-heading: rgb(63, 63, 63);
+	--w-color-nav-hover: rgb(216, 216, 216);
 
-  /* Surfaces et fonds */
-  --w-color-surface: rgb(224, 224, 224);
-  --w-color-background: rgb(224, 224, 224);
-  --w-color-surface-raised: rgb(232, 232, 232);
-  --w-color-surface-lowered: rgb(216, 216, 216);
-  --w-color-overlay: rgba(128, 128, 128, 0.4);
+	/* Bordures */
+	--w-color-border: rgb(160, 160, 164);
+	--w-color-border-strong: rgb(128, 128, 128);
+	--w-color-border-neutral: rgb(192, 192, 192);
+	--w-color-border-warning: rgb(245, 225, 27);
+	--w-color-border-highlight: rgb(145, 106, 173);
+	--w-color-border-danger: rgb(226, 32, 40);
+	--w-color-border-success: rgb(147, 194, 228);
+	--w-color-border-info: rgb(71, 92, 167);
+	--w-color-border-progress: rgb(147, 194, 228);
+	--w-color-border-hover: rgb(63, 63, 63);
 
-  /* États et statuts */
-  --w-color-status-neutral: rgb(240, 240, 240);
-  --w-color-status-warning: rgb(245, 225, 27);
-  --w-color-status-highlight: rgb(145, 106, 173);
-  --w-color-status-danger: rgb(226, 32, 40);
-  --w-color-status-success: rgb(147, 194, 228);
-  --w-color-status-info: rgb(71, 92, 167);
-  --w-color-status-progress: rgb(147, 194, 228);
-  --w-color-status-notification: rgb(226, 32, 40);
+	/* Surfaces et fonds */
+	--w-color-surface: rgb(232, 232, 232);
+	--w-color-background: rgb(224, 224, 224);
+	--w-color-surface-raised: rgb(232, 232, 232);
+	--w-color-surface-lowered: rgb(216, 216, 216);
+	--w-color-overlay: rgba(128, 128, 128, 0.4);
 
-  /* Versions atténuées des statuts */
-  --w-color-status-neutral-weak: rgb(232, 232, 232);
-  --w-color-status-warning-weak: rgb(245, 225, 27);
-  --w-color-status-highlight-weak: rgb(145, 106, 173);
-  --w-color-status-danger-weak: rgb(226, 32, 40);
-  --w-color-status-success-weak: rgb(147, 194, 228);
-  --w-color-status-info-weak: rgb(71, 92, 167);
-  --w-color-status-progress-weak: rgb(147, 194, 228);
+	/* États et statuts */
+	--w-color-status-neutral: rgb(240, 240, 240);
+	--w-color-status-warning: rgb(245, 225, 27);
+	--w-color-status-highlight: rgb(145, 106, 173);
+	--w-color-status-danger: rgb(226, 32, 40);
+	--w-color-status-success: rgb(147, 194, 228);
+	--w-color-status-info: rgb(71, 92, 167);
+	--w-color-status-progress: rgb(147, 194, 228);
+	--w-color-status-notification: rgb(226, 32, 40);
 
-  /* Éléments d'interface */
-  --w-color-button: rgb(198, 198, 198);
-  --w-color-button-hover: rgb(170, 170, 170);
-  --w-color-icon: rgb(128, 128, 128);
-  --w-color-icon-hover: rgb(63, 63, 63);
-  --w-color-active: rgb(170, 170, 170);
-  --w-color-header: rgb(224, 224, 224);
+	/* Versions atténuées des statuts */
+	--w-color-status-neutral-weak: rgb(232, 232, 232);
+	--w-color-status-warning-weak: rgb(245, 225, 27);
+	--w-color-status-highlight-weak: rgb(145, 106, 173);
+	--w-color-status-danger-weak: rgb(226, 32, 40);
+	--w-color-status-success-weak: rgb(147, 194, 228);
+	--w-color-status-info-weak: rgb(71, 92, 167);
+	--w-color-status-progress-weak: rgb(147, 194, 228);
 
-  /* Ombres */
-  --w-box-shadow: 0 1px 3px rgba(12, 12, 12, 0.09);
-  --w-box-shadow-header: 0 1px 5px rgba(12, 12, 12, 0.05);
-  --w-box-shadow-card: 0 0 0 1px var(--w-color-border), 0 1px 5px rgba(12, 12, 12, 0.05), 0 0 40px rgba(12, 12, 12, 0.015);
-  --w-box-shadow-nav: 0 0 0 1px var(--w-color-border), 0 5px 17px rgba(12, 12, 12, 0.14);
-  --w-box-shadow-popout: 0 4px 12px rgba(12, 12, 12, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
-  --w-box-shadow-modal: 0 24px 38px 3px rgba(12, 12, 12, 0.16), 0 9px 86px 8px rgba(12, 12, 12, 0.1), 0 11px 15px -7px rgba(12, 12, 12, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-  --w-box-shadow-dark: 0 1px 3px rgba(0, 0, 0, 0.2);
-  --w-box-shadow-header-dark: 0 1px 5px rgba(0, 0, 0, 0.15);
-  --w-box-shadow-card-dark: 0 0 0 1px var(--w-color-border), 0 1px 5px rgba(0, 0, 0, 0.15);
-  --w-box-shadow-nav-dark: 0 0 0 1px var(--w-color-border), 0 5px 17px rgba(0, 0, 0, 0.24);
-  --w-box-shadow-popout-dark: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px var(--w-color-border);
-  --w-box-shadow-modal-dark: 0 0 0 1px var(--w-color-border), 0 24px 38px 3px rgba(0, 0, 0, 0.34), 0px 9px 86px 8px rgba(0, 0, 0, 0.28), 0px 11px 15px -7px rgba(0, 0, 0, 0.28);
+	/* Éléments d'interface */
+	--w-color-button: rgb(198, 198, 198);
+	--w-color-button-hover: rgb(170, 170, 170);
+	--w-color-icon: rgb(128, 128, 128);
+	--w-color-icon-hover: rgb(63, 63, 63);
+	--w-color-active: rgb(170, 170, 170);
+	--w-color-header: rgb(224, 224, 224);
 
-  /* Typographie */
-  --w-font-size-xxxl: 2.25rem;
-  --w-font-size-xxl: 1.5rem;
-  --w-font-size-xl: 1.25rem;
-  --w-font-size-l: 1rem;
-  --w-font-size-m: 0.875rem;
-  --w-font-size-s: 0.75rem;
-  --w-font-size-xs: 0.6875rem;
-  --w-font-family: "Nordhealth Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --w-font-family-code: "Nordhealth Mono", monospace, monospace;
-  --w-font-features: "kern" 1, "tnum" 1, "calt" 1, "case" 1, "cv05" 1, "zero" 1, "cv08" 0, "ss03" 1;
-  --w-font-features-reduced: "kern" 1, "tnum" 0, "calt" 1, "case" 1, "cv05" 1, "zero" 0, "cv08" 0, "ss03" 1;
-  --w-font-weight: 400;
-  --w-font-weight-active: 500;
-  --w-font-weight-heading: 600;
-  --w-font-weight-strong: 670;
+	/* Ombres */
+	--w-box-shadow: 0 1px 3px rgba(12, 12, 12, 0.09);
+	--w-box-shadow-header: 0 1px 5px rgba(12, 12, 12, 0.05);
+	--w-box-shadow-card: 0 0 0 1px var(--w-color-border), 0 1px 5px rgba(12, 12, 12, 0.05),
+		0 0 40px rgba(12, 12, 12, 0.015);
+	--w-box-shadow-nav: 0 0 0 1px var(--w-color-border), 0 5px 17px rgba(12, 12, 12, 0.14);
+	--w-box-shadow-popout: 0 4px 12px rgba(12, 12, 12, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+	--w-box-shadow-modal: 0 24px 38px 3px rgba(12, 12, 12, 0.16),
+		0 9px 86px 8px rgba(12, 12, 12, 0.1), 0 11px 15px -7px rgba(12, 12, 12, 0.1),
+		0 0 0 1px rgba(0, 0, 0, 0.05);
+	--w-box-shadow-dark: 0 1px 3px rgba(0, 0, 0, 0.2);
+	--w-box-shadow-header-dark: 0 1px 5px rgba(0, 0, 0, 0.15);
+	--w-box-shadow-card-dark: 0 0 0 1px var(--w-color-border), 0 1px 5px rgba(0, 0, 0, 0.15);
+	--w-box-shadow-nav-dark: 0 0 0 1px var(--w-color-border), 0 5px 17px rgba(0, 0, 0, 0.24);
+	--w-box-shadow-popout-dark: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px var(--w-color-border);
+	--w-box-shadow-modal-dark: 0 0 0 1px var(--w-color-border), 0 24px 38px 3px rgba(0, 0, 0, 0.34),
+		0px 9px 86px 8px rgba(0, 0, 0, 0.28), 0px 11px 15px -7px rgba(0, 0, 0, 0.28);
 
-  /* Tailles des icônes */
-  --w-size-icon-xxs: 8px;
-  --w-size-icon-xs: 10px;
-  --w-size-icon-s: 12px;
-  --w-size-icon-m: 16px;
-  --w-size-icon-l: 24px;
-  --w-size-icon-xl: 36px;
-  --w-size-icon-xxl: 72px;
-  --w-size-top-bar: 52px;
+	/* Typographie */
+	--w-font-size-xxxl: 2.25rem;
+	--w-font-size-xxl: 1.5rem;
+	--w-font-size-xl: 1.25rem;
+	--w-font-size-l: 1rem;
+	--w-font-size-m: 0.875rem;
+	--w-font-size-s: 0.75rem;
+	--w-font-size-xs: 0.6875rem;
+	--w-font-family: 'Nordhealth Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+		Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+	--w-font-family-code: 'Nordhealth Mono', monospace, monospace;
+	--w-font-features: 'kern' 1, 'tnum' 1, 'calt' 1, 'case' 1, 'cv05' 1, 'zero' 1, 'cv08' 0, 'ss03' 1;
+	--w-font-features-reduced: 'kern' 1, 'tnum' 0, 'calt' 1, 'case' 1, 'cv05' 1, 'zero' 0, 'cv08' 0,
+		'ss03' 1;
+	--w-font-weight: 400;
+	--w-font-weight-active: 500;
+	--w-font-weight-heading: 600;
+	--w-font-weight-strong: 670;
 
-  /* Espacement */
-  --w-space-xxl: 72px;
-  --w-space-xl: 36px;
-  --w-space-l: 24px;
-  --w-space-m: 16px;
-  --w-space-s: 8px;
-  --w-space-xs: 4px;
+	/* Tailles des icônes */
+	--w-size-icon-xxs: 8px;
+	--w-size-icon-xs: 10px;
+	--w-size-icon-s: 12px;
+	--w-size-icon-m: 16px;
+	--w-size-icon-l: 24px;
+	--w-size-icon-xl: 36px;
+	--w-size-icon-xxl: 72px;
+	--w-size-top-bar: 52px;
 
-  /* Bordures arrondies */
-  --w-border-radius-sharp: 0.02em;
-  --w-border-radius-s: 3px;
-  --w-border-radius: 5px;
-  --w-border-radius-pill: 999px;
-  --w-border-radius-circle: 50%;
+	/* Espacement */
+	--w-space-xxl: 72px;
+	--w-space-xl: 36px;
+	--w-space-l: 24px;
+	--w-space-m: 16px;
+	--w-space-s: 8px;
+	--w-space-xs: 4px;
 
-  /* Transitions */
-  --w-transition-quickly: 0.05s ease;
-  --w-transition-slowly: 0.2s ease;
-  --w-transition-mobile: 0.4s ease;
+	/* Bordures arrondies */
+	--w-border-radius-sharp: 0.02em;
+	--w-border-radius-s: 3px;
+	--w-border-radius: 5px;
+	--w-border-radius-pill: 999px;
+	--w-border-radius-circle: 50%;
 
-  /* Hauteurs de ligne */
-  --w-line-height-tight: 1.15;
-  --w-line-height-heading: 1.2;
-  --w-line-height-caption: 1.3;
-  --w-line-height: 1.5;
-  --w-line-height-form: 20px;
+	/* Transitions */
+	--w-transition-quickly: 0.05s ease;
+	--w-transition-slowly: 0.2s ease;
+	--w-transition-mobile: 0.4s ease;
 
-  /* Z-index */
-  --w-index-deep: -999999;
-  --w-index-default: 1;
-  --w-index-masked: 100;
-  --w-index-mask: 200;
-  --w-index-sticky: 300;
-  --w-index-nav: 400;
-  --w-index-top-bar: 500;
-  --w-index-overlay: 600;
-  --w-index-spinner: 700;
-  --w-index-popout: 800;
-  --w-index-toast: 900;
-  --w-index-modal: 1000;
+	/* Hauteurs de ligne */
+	--w-line-height-tight: 1.15;
+	--w-line-height-heading: 1.2;
+	--w-line-height-caption: 1.3;
+	--w-line-height: 1.5;
+	--w-line-height-form: 20px;
+
+	/* Z-index */
+	--w-index-deep: -999999;
+	--w-index-default: 1;
+	--w-index-masked: 100;
+	--w-index-mask: 200;
+	--w-index-sticky: 300;
+	--w-index-nav: 400;
+	--w-index-top-bar: 500;
+	--w-index-overlay: 600;
+	--w-index-spinner: 700;
+	--w-index-popout: 800;
+	--w-index-toast: 900;
+	--w-index-modal: 1000;
 }

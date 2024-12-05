@@ -41,6 +41,9 @@
 		"@watt-ui/core": "workspace:*",
 		"dompurify": "^3.2.2",
 		"marked": "^15.0.3",
-		"mingcute_icon": "^2.9.5"
+		"mdast": "^3.0.0",
+		"mdast-util-to-string": "^4.0.0",
+		"mingcute_icon": "^2.9.5",
+		"unist-util-visit": "^5.0.0"
 	}
 }
