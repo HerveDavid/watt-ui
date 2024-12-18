@@ -27,6 +27,7 @@ export { WattIcon } from "./components/icon";
 
 // Indicator Components
 export { WattGauge } from "./components/gauge";
+export { WattIndicator } from "./components/indicator";
 
 // Layout Components
 export { WattStack } from "./components/stack";
