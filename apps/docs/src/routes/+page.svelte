@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <div class="overflow-auto">
 	<section class="hero h-4/6">
 		<div class="hero-content context">

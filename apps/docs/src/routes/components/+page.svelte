@@ -6,10 +6,12 @@
 	let components = getComponentPosts();
 
 	// Filter components
-	let filterText = '';
-	let selectedCategory = 'All categories';
-	$: filteredComponents = components.filter((component) =>
-		component.title.toLowerCase().includes(filterText.toLowerCase())
+	let filterText = $state('');
+	let selectedCategory = $state('All categories');
+	let filteredComponents = $derived(	
+		components.filter((component) =>
+			component.title.toLowerCase().includes(filterText.toLowerCase())
+		)
 	);
 </script>
 

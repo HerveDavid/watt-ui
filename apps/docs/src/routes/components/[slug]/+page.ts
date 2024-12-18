@@ -1,13 +1,10 @@
 export async function load({ params }) {
 
   // Load component markdown
-  const component = await import(`@/components/${params.slug}.md`);
+  const file = await import(`@/components/${params.slug}.md?.raw`);
 
   return {
-    component: component.default,
-    metadata: component.metadata
+    component: file.default,
   };
 
 }
-
-// export const prerender = true;
